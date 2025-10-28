@@ -1,0 +1,85 @@
+{
+  "expo": {
+    "name": "dsquare4.0",
+    "slug": "dsquare4-0",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "scheme": "dsquare",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "bundleIdentifier": "com.mpho.dsquare",
+      "supportsTablet": true,
+      "config": {
+        "googleMapsApiKey": "AIzaSyDR5JhBnTT53KmUwNQI6QcWG5RjY5sdYRM"
+      },
+      "infoPlist": {
+        "NSCameraUsageDescription": "Allow Dsquare to scan QR codes to send money.",
+        "NSLocationWhenInUseUsageDescription": "Allow Dsquare to access your location to set pickup and destination on the map.",
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.mpho.dsquare",
+      "android": {
+        "adaptiveIcon": {
+          "foregroundImage": "./assets/adaptive-icon.png",
+          "backgroundColor": "#ffffff"
+        }
+      },
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyDR5JhBnTT53KmUwNQI6QcWG5RjY5sdYRM"
+        }
+      },
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "CAMERA",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-web-browser",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Dsquare to scan QR codes to send money."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Allow Dsquare to access your location to set pickup and destination on the map."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#ffffff",
+          "mode": "production"
+        }
+      ],
+      "expo-font"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "8b40b37d-0d36-40b5-a1e8-c2a55308ab7e"
+      }
+    },
+    "owner": "xeno_thetechguy"
+  }
+}

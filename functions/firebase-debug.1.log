@@ -1,0 +1,1224 @@
+[debug] [2025-08-12T12:38:08.496Z] ----------------------------------------------------------------------
+[debug] [2025-08-12T12:38:08.498Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\molef\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2025-08-12T12:38:08.498Z] CLI Version:   13.35.1
+[debug] [2025-08-12T12:38:08.498Z] Platform:      win32
+[debug] [2025-08-12T12:38:08.498Z] Node Version:  v18.20.7
+[debug] [2025-08-12T12:38:08.499Z] Time:          Tue Aug 12 2025 14:38:08 GMT+0200 (South Africa Standard Time)
+[debug] [2025-08-12T12:38:08.499Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-08-12T12:38:08.644Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-08-12T12:38:08.645Z] > authorizing via signed-in user (molefempho783@gmail.com)
+[debug] [2025-08-12T12:38:08.645Z] [iam] checking project communitychat-f3fb0 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2025-08-12T12:38:08.646Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:08.646Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:08.647Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/communitychat-f3fb0:testIamPermissions [none]
+[debug] [2025-08-12T12:38:08.647Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/communitychat-f3fb0:testIamPermissions x-goog-quota-user=projects/communitychat-f3fb0
+[debug] [2025-08-12T12:38:08.647Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/communitychat-f3fb0:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-08-12T12:38:10.852Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/communitychat-f3fb0:testIamPermissions 200
+[debug] [2025-08-12T12:38:10.852Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/communitychat-f3fb0:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-08-12T12:38:10.853Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:10.853Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:10.853Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/communitychat-f3fb0/serviceAccounts/communitychat-f3fb0@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2025-08-12T12:38:10.853Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/communitychat-f3fb0/serviceAccounts/communitychat-f3fb0@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2025-08-12T12:38:11.946Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/communitychat-f3fb0/serviceAccounts/communitychat-f3fb0@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2025-08-12T12:38:11.946Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/communitychat-f3fb0/serviceAccounts/communitychat-f3fb0@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'communitychat-f3fb0'...
+[info] 
+[info] i  deploying functions 
+[info] Running command: npm --prefix "$RESOURCE_DIR" install
+[info] Running command: npm --prefix "$RESOURCE_DIR" run build
+[info] +  functions: Finished running predeploy script. 
+[debug] [2025-08-12T12:38:17.268Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:17.268Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:17.269Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/communitychat-f3fb0 [none]
+[debug] [2025-08-12T12:38:19.695Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/communitychat-f3fb0 200
+[debug] [2025-08-12T12:38:19.695Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/communitychat-f3fb0 {"projectNumber":"975021405125","projectId":"communitychat-f3fb0","lifecycleState":"ACTIVE","name":"CommunityChat","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-02-24T19:41:46.530557Z"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[debug] [2025-08-12T12:38:19.698Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:19.698Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:19.698Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:19.698Z] Checked if tokens are valid: true, expires at: 1755005640231
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2025-08-12T12:38:19.699Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:19.699Z] Checked if tokens are valid: true, expires at: 1755005640231
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2025-08-12T12:38:19.700Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:19.700Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:19.700Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-08-12T12:38:19.700Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/communitychat-f3fb0
+[debug] [2025-08-12T12:38:19.702Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/runtimeconfig.googleapis.com [none]
+[debug] [2025-08-12T12:38:19.702Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/communitychat-f3fb0
+[debug] [2025-08-12T12:38:19.703Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/cloudbuild.googleapis.com [none]
+[debug] [2025-08-12T12:38:19.703Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/cloudbuild.googleapis.com x-goog-quota-user=projects/communitychat-f3fb0
+[debug] [2025-08-12T12:38:19.704Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/artifactregistry.googleapis.com [none]
+[debug] [2025-08-12T12:38:19.704Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/artifactregistry.googleapis.com x-goog-quota-user=projects/communitychat-f3fb0
+[debug] [2025-08-12T12:38:22.337Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/runtimeconfig.googleapis.com 200
+[debug] [2025-08-12T12:38:22.337Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2025-08-12T12:38:22.349Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/cloudbuild.googleapis.com 200
+[debug] [2025-08-12T12:38:22.349Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2025-08-12T12:38:22.381Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/cloudfunctions.googleapis.com 200
+[debug] [2025-08-12T12:38:22.381Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2025-08-12T12:38:22.381Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/artifactregistry.googleapis.com 200
+[debug] [2025-08-12T12:38:22.381Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2025-08-12T12:38:22.382Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:22.382Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:22.382Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/communitychat-f3fb0/adminSdkConfig [none]
+[debug] [2025-08-12T12:38:23.484Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/communitychat-f3fb0/adminSdkConfig 200
+[debug] [2025-08-12T12:38:23.485Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/communitychat-f3fb0/adminSdkConfig {"projectId":"communitychat-f3fb0","storageBucket":"communitychat-f3fb0.firebasestorage.app"}
+[debug] [2025-08-12T12:38:23.485Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:23.485Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:23.485Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/communitychat-f3fb0/configs [none]
+[debug] [2025-08-12T12:38:24.740Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/communitychat-f3fb0/configs 200
+[debug] [2025-08-12T12:38:24.740Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/communitychat-f3fb0/configs {"configs":[{"name":"projects/communitychat-f3fb0/configs/paypal"},{"name":"projects/communitychat-f3fb0/configs/fx"}]}
+[debug] [2025-08-12T12:38:24.740Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:24.740Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:24.740Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:24.740Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:24.741Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/communitychat-f3fb0/configs/paypal/variables [none]
+[debug] [2025-08-12T12:38:24.742Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/communitychat-f3fb0/configs/fx/variables [none]
+[debug] [2025-08-12T12:38:25.383Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/communitychat-f3fb0/configs/fx/variables 200
+[debug] [2025-08-12T12:38:25.383Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/communitychat-f3fb0/configs/fx/variables {"variables":[{"name":"projects/communitychat-f3fb0/configs/fx/variables/apikey","updateTime":"2025-08-07T20:06:26.130342536Z"}]}
+[debug] [2025-08-12T12:38:25.384Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:25.384Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:25.384Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/communitychat-f3fb0/configs/fx/variables/apikey [none]
+[debug] [2025-08-12T12:38:25.406Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/communitychat-f3fb0/configs/paypal/variables 200
+[debug] [2025-08-12T12:38:25.407Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/communitychat-f3fb0/configs/paypal/variables {"variables":[{"name":"projects/communitychat-f3fb0/configs/paypal/variables/secret","updateTime":"2025-08-07T20:55:24.032376502Z"},{"name":"projects/communitychat-f3fb0/configs/paypal/variables/client_id","updateTime":"2025-08-07T20:55:18.612086212Z"}]}
+[debug] [2025-08-12T12:38:25.407Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:25.407Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:25.407Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:25.407Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:25.407Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/communitychat-f3fb0/configs/paypal/variables/secret [none]
+[debug] [2025-08-12T12:38:25.408Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/communitychat-f3fb0/configs/paypal/variables/client_id [none]
+[debug] [2025-08-12T12:38:26.013Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/communitychat-f3fb0/configs/fx/variables/apikey 200
+[debug] [2025-08-12T12:38:26.013Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/communitychat-f3fb0/configs/fx/variables/apikey {"name":"projects/communitychat-f3fb0/configs/fx/variables/apikey","updateTime":"2025-08-07T20:06:26.130342536Z","text":"5be414d84fb56fedd54b86e9267ee026"}
+[debug] [2025-08-12T12:38:26.063Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/communitychat-f3fb0/configs/paypal/variables/client_id 200
+[debug] [2025-08-12T12:38:26.064Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/communitychat-f3fb0/configs/paypal/variables/client_id {"name":"projects/communitychat-f3fb0/configs/paypal/variables/client_id","updateTime":"2025-08-07T20:55:18.612086212Z","text":"ARKO3vSX_mxNzH8kReTrrvROZQKZ3dIURB3gWuURNDNomMjNEjah3bYm4pjwNmpVulI7RTHq11Y0bKcz"}
+[debug] [2025-08-12T12:38:26.091Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/communitychat-f3fb0/configs/paypal/variables/secret 200
+[debug] [2025-08-12T12:38:26.091Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/communitychat-f3fb0/configs/paypal/variables/secret {"name":"projects/communitychat-f3fb0/configs/paypal/variables/secret","updateTime":"2025-08-07T20:55:24.032376502Z","text":"EK7IGrg-9gH_R06wT6YHEO7foLL_SdYrOVY-Eo4T8vRNHHf9RGxCezczpAegvcpAxJUjzcRQEvl9lUeg"}
+[debug] [2025-08-12T12:38:26.092Z] Validating nodejs source
+[debug] [2025-08-12T12:38:27.046Z] > [functions] package.json contents: {
+  "name": "functions",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "type": "module",
+  "engines": {
+    "node": "22"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "lint": "eslint --ext .ts .",
+    "logs": "firebase functions:log"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "dsquare4.0": "file:..",
+    "express": "^4.19.2",
+    "firebase-admin": "^13.4.0",
+    "firebase-functions": "^6.4.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.57.1",
+    "typescript": "^5.6.3"
+  }
+}
+[debug] [2025-08-12T12:38:27.047Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2025-08-12T12:38:27.048Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-08-12T12:38:27.056Z] Found firebase-functions binary at 'C:\Users\molef\projects\square4.0\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8024
+
+[debug] [2025-08-12T12:38:27.735Z] Got response from /__/functions.yaml {"endpoints":{"adminAdjustBalance":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","secretEnvironmentVariables":[{"key":"APP_BASE_CURRENCY"}],"labels":{},"callableTrigger":{},"entryPoint":"adminAdjustBalance"},"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","secretEnvironmentVariables":[{"key":"PAYPAL_CLIENT_ID"},{"key":"PAYPAL_SECRET"},{"key":"PAYPAL_WEBHOOK_ID"},{"key":"FX_API_KEY"},{"key":"APP_BASE_CURRENCY"}],"labels":{},"httpsTrigger":{},"entryPoint":"api"},"capturePayPalOrder":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","secretEnvironmentVariables":[{"key":"PAYPAL_CLIENT_ID"},{"key":"PAYPAL_SECRET"},{"key":"APP_BASE_CURRENCY"}],"labels":{},"callableTrigger":{},"entryPoint":"capturePayPalOrder"},"convertCurrency":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","secretEnvironmentVariables":[{"key":"FX_API_KEY"},{"key":"APP_BASE_CURRENCY"},{"key":"FX_BASE_URL"}],"labels":{},"callableTrigger":{},"entryPoint":"convertCurrency"},"createPayPalOrder":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","secretEnvironmentVariables":[{"key":"PAYPAL_CLIENT_ID"},{"key":"PAYPAL_SECRET"},{"key":"APP_BASE_CURRENCY"}],"labels":{},"callableTrigger":{},"entryPoint":"createPayPalOrder"},"getTransactions":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","secretEnvironmentVariables":[{"key":"APP_BASE_CURRENCY"}],"labels":{},"callableTrigger":{},"entryPoint":"getTransactions"},"getWalletBalance":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","secretEnvironmentVariables":[{"key":"APP_BASE_CURRENCY"}],"labels":{},"callableTrigger":{},"entryPoint":"getWalletBalance"},"transferFunds":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","secretEnvironmentVariables":[{"key":"APP_BASE_CURRENCY"}],"labels":{},"callableTrigger":{},"entryPoint":"transferFunds"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] i  extensions: ensuring required API firebaseextensions.googleapis.com is enabled... 
+[debug] [2025-08-12T12:38:27.773Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:27.773Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:27.773Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/firebaseextensions.googleapis.com [none]
+[debug] [2025-08-12T12:38:27.773Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/firebaseextensions.googleapis.com x-goog-quota-user=projects/communitychat-f3fb0
+[debug] [2025-08-12T12:38:29.842Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/firebaseextensions.googleapis.com 200
+[debug] [2025-08-12T12:38:29.842Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/firebaseextensions.googleapis.com [omitted]
+[info] +  extensions: required API firebaseextensions.googleapis.com is enabled 
+[debug] [2025-08-12T12:38:29.842Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-08-12T12:38:29.843Z] > authorizing via signed-in user (molefempho783@gmail.com)
+[debug] [2025-08-12T12:38:29.843Z] [iam] checking project communitychat-f3fb0 for permissions ["firebase.projects.get","firebaseextensions.instances.list"]
+[debug] [2025-08-12T12:38:29.843Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:29.843Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:29.843Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/communitychat-f3fb0:testIamPermissions [none]
+[debug] [2025-08-12T12:38:29.843Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/communitychat-f3fb0:testIamPermissions x-goog-quota-user=projects/communitychat-f3fb0
+[debug] [2025-08-12T12:38:29.843Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/communitychat-f3fb0:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2025-08-12T12:38:31.903Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/communitychat-f3fb0:testIamPermissions 200
+[debug] [2025-08-12T12:38:31.903Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/communitychat-f3fb0:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2025-08-12T12:38:31.904Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:31.904Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:31.905Z] >>> [apiv2][query] GET https://firebaseextensions.googleapis.com/v1beta/projects/communitychat-f3fb0/instances pageSize=100&pageToken=
+[debug] [2025-08-12T12:38:34.412Z] <<< [apiv2][status] GET https://firebaseextensions.googleapis.com/v1beta/projects/communitychat-f3fb0/instances 200
+[debug] [2025-08-12T12:38:34.412Z] <<< [apiv2][body] GET https://firebaseextensions.googleapis.com/v1beta/projects/communitychat-f3fb0/instances {}
+[info] i  functions: Loaded environment variables from .env. 
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged C:\Users\molef\projects\square4.0\functions (56.8 KB) for uploading 
+[debug] [2025-08-12T12:38:34.455Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:34.456Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:34.456Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/communitychat-f3fb0/locations/-/functions [none]
+[debug] [2025-08-12T12:38:35.401Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/communitychat-f3fb0/locations/-/functions 200
+[debug] [2025-08-12T12:38:35.401Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/communitychat-f3fb0/locations/-/functions {}
+[debug] [2025-08-12T12:38:35.401Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:35.401Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:35.402Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2025-08-12T12:38:36.891Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/-/functions 200
+[debug] [2025-08-12T12:38:36.891Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/-/functions {"functions":[{"name":"projects/communitychat-f3fb0/locations/us-central1/functions/convertCurrency","buildConfig":{"build":"projects/975021405125/locations/us-central1/builds/67be72b0-9160-4ace-a391-ea78f4d2f649","runtime":"nodejs22","entryPoint":"convertCurrency","source":{"storageSource":{"bucket":"gcf-v2-sources-975021405125-us-central1","object":"convertCurrency/function-source.zip","generation":"1754999326084580"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-975021405125-us-central1","object":"convertCurrency/function-source.zip","generation":"1754999326084580"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/communitychat-f3fb0/serviceAccounts/975021405125-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/communitychat-f3fb0/locations/us-central1/services/convertcurrency","timeoutSeconds":60,"environmentVariables":{"PAYPAL_ENV":"sandbox","PAYPAL_CLIENT_ID":"AUKQcIUVN38c2D823Ab80YioFu2m6Ck5eS0kegKA_khhSJvcQOiYobc1cSxnVqOwMSEXeyr2jyJWDx8F","PAYPAL_SECRET":"EMcV0cnJ7EUt4fTpoGLsUCYCA7OC0lc3QCjQdLYPwT_amAJSwA3R0eyBjHwnfSp8y7juc93_sw60p5Vf","PAYPAL_WEBHOOK_ID":"1K354372YY825204A","FX_API_KEY":"5be414d84fb56fedd54b86e9267ee026","FX_BASE_URL":"https://api.exchangerate.host","APP_BASE_CURRENCY":"ZAR","FIREBASE_CONFIG":"{\"projectId\":\"communitychat-f3fb0\",\"storageBucket\":\"communitychat-f3fb0.firebasestorage.app\"}","GCLOUD_PROJECT":"communitychat-f3fb0","EVENTARC_CLOUD_EVENT_SOURCE":"projects/communitychat-f3fb0/locations/us-central1/services/convertCurrency","FUNCTION_TARGET":"convertCurrency","LOG_EXECUTION_ID":"true","FUNCTION_SIGNATURE_TYPE":"http"},"maxInstanceCount":20,"ingressSettings":"ALLOW_ALL","uri":"https://convertcurrency-f5l3uc3mba-uc.a.run.app","serviceAccountEmail":"975021405125-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"convertcurrency-00001-hux","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","updateTime":"2025-08-12T11:48:59.939447253Z","labels":{"deployment-callable":"true","firebase-functions-hash":"6de83488d91272e8c7e773ab24004464c75fb6a3","deployment-tool":"cli-firebase"},"environment":"GEN_2","url":"https://us-central1-communitychat-f3fb0.cloudfunctions.net/convertCurrency","createTime":"2025-08-12T11:48:46.366668993Z","satisfiesPzi":true},{"name":"projects/communitychat-f3fb0/locations/us-central1/functions/getTransactions","buildConfig":{"build":"projects/975021405125/locations/us-central1/builds/67be72b0-9160-4ace-a391-ea78f4d2f649","runtime":"nodejs22","entryPoint":"getTransactions","source":{"storageSource":{"bucket":"gcf-v2-sources-975021405125-us-central1","object":"getTransactions/function-source.zip","generation":"1754999326033469"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-975021405125-us-central1","object":"getTransactions/function-source.zip","generation":"1754999326033469"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/communitychat-f3fb0/serviceAccounts/975021405125-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/communitychat-f3fb0/locations/us-central1/services/gettransactions","timeoutSeconds":60,"environmentVariables":{"PAYPAL_ENV":"sandbox","PAYPAL_CLIENT_ID":"AUKQcIUVN38c2D823Ab80YioFu2m6Ck5eS0kegKA_khhSJvcQOiYobc1cSxnVqOwMSEXeyr2jyJWDx8F","PAYPAL_SECRET":"EMcV0cnJ7EUt4fTpoGLsUCYCA7OC0lc3QCjQdLYPwT_amAJSwA3R0eyBjHwnfSp8y7juc93_sw60p5Vf","PAYPAL_WEBHOOK_ID":"1K354372YY825204A","FX_API_KEY":"5be414d84fb56fedd54b86e9267ee026","FX_BASE_URL":"https://api.exchangerate.host","APP_BASE_CURRENCY":"ZAR","FIREBASE_CONFIG":"{\"projectId\":\"communitychat-f3fb0\",\"storageBucket\":\"communitychat-f3fb0.firebasestorage.app\"}","GCLOUD_PROJECT":"communitychat-f3fb0","EVENTARC_CLOUD_EVENT_SOURCE":"projects/communitychat-f3fb0/locations/us-central1/services/getTransactions","FUNCTION_TARGET":"getTransactions","LOG_EXECUTION_ID":"true","FUNCTION_SIGNATURE_TYPE":"http"},"maxInstanceCount":20,"ingressSettings":"ALLOW_ALL","uri":"https://gettransactions-f5l3uc3mba-uc.a.run.app","serviceAccountEmail":"975021405125-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"gettransactions-00001-mod","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","updateTime":"2025-08-12T11:48:59.818494113Z","labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"6de83488d91272e8c7e773ab24004464c75fb6a3"},"environment":"GEN_2","url":"https://us-central1-communitychat-f3fb0.cloudfunctions.net/getTransactions","createTime":"2025-08-12T11:48:46.386403980Z","satisfiesPzi":true},{"name":"projects/communitychat-f3fb0/locations/us-central1/functions/transferFunds","buildConfig":{"build":"projects/975021405125/locations/us-central1/builds/67be72b0-9160-4ace-a391-ea78f4d2f649","runtime":"nodejs22","entryPoint":"transferFunds","source":{"storageSource":{"bucket":"gcf-v2-sources-975021405125-us-central1","object":"transferFunds/function-source.zip","generation":"1754999326039679"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-975021405125-us-central1","object":"transferFunds/function-source.zip","generation":"1754999326039679"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/communitychat-f3fb0/serviceAccounts/975021405125-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/communitychat-f3fb0/locations/us-central1/services/transferfunds","timeoutSeconds":60,"environmentVariables":{"PAYPAL_ENV":"sandbox","PAYPAL_CLIENT_ID":"AUKQcIUVN38c2D823Ab80YioFu2m6Ck5eS0kegKA_khhSJvcQOiYobc1cSxnVqOwMSEXeyr2jyJWDx8F","PAYPAL_SECRET":"EMcV0cnJ7EUt4fTpoGLsUCYCA7OC0lc3QCjQdLYPwT_amAJSwA3R0eyBjHwnfSp8y7juc93_sw60p5Vf","PAYPAL_WEBHOOK_ID":"1K354372YY825204A","FX_API_KEY":"5be414d84fb56fedd54b86e9267ee026","FX_BASE_URL":"https://api.exchangerate.host","APP_BASE_CURRENCY":"ZAR","FIREBASE_CONFIG":"{\"projectId\":\"communitychat-f3fb0\",\"storageBucket\":\"communitychat-f3fb0.firebasestorage.app\"}","GCLOUD_PROJECT":"communitychat-f3fb0","EVENTARC_CLOUD_EVENT_SOURCE":"projects/communitychat-f3fb0/locations/us-central1/services/transferFunds","FUNCTION_TARGET":"transferFunds","LOG_EXECUTION_ID":"true","FUNCTION_SIGNATURE_TYPE":"http"},"maxInstanceCount":20,"ingressSettings":"ALLOW_ALL","uri":"https://transferfunds-f5l3uc3mba-uc.a.run.app","serviceAccountEmail":"975021405125-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"transferfunds-00001-gow","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","updateTime":"2025-08-12T11:48:59.411117255Z","labels":{"deployment-callable":"true","firebase-functions-hash":"6de83488d91272e8c7e773ab24004464c75fb6a3","deployment-tool":"cli-firebase"},"environment":"GEN_2","url":"https://us-central1-communitychat-f3fb0.cloudfunctions.net/transferFunds","createTime":"2025-08-12T11:48:46.351228297Z","satisfiesPzi":true},{"name":"projects/communitychat-f3fb0/locations/us-central1/functions/adminAdjustBalance","buildConfig":{"build":"projects/975021405125/locations/us-central1/builds/67be72b0-9160-4ace-a391-ea78f4d2f649","runtime":"nodejs22","entryPoint":"adminAdjustBalance","source":{"storageSource":{"bucket":"gcf-v2-sources-975021405125-us-central1","object":"adminAdjustBalance/function-source.zip","generation":"1754999266129047"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-975021405125-us-central1","object":"adminAdjustBalance/function-source.zip","generation":"1754999266129047"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/communitychat-f3fb0/serviceAccounts/975021405125-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/communitychat-f3fb0/locations/us-central1/services/adminadjustbalance","timeoutSeconds":60,"environmentVariables":{"PAYPAL_ENV":"sandbox","PAYPAL_CLIENT_ID":"AUKQcIUVN38c2D823Ab80YioFu2m6Ck5eS0kegKA_khhSJvcQOiYobc1cSxnVqOwMSEXeyr2jyJWDx8F","PAYPAL_SECRET":"EMcV0cnJ7EUt4fTpoGLsUCYCA7OC0lc3QCjQdLYPwT_amAJSwA3R0eyBjHwnfSp8y7juc93_sw60p5Vf","PAYPAL_WEBHOOK_ID":"1K354372YY825204A","FX_API_KEY":"5be414d84fb56fedd54b86e9267ee026","FX_BASE_URL":"https://api.exchangerate.host","APP_BASE_CURRENCY":"ZAR","FIREBASE_CONFIG":"{\"projectId\":\"communitychat-f3fb0\",\"storageBucket\":\"communitychat-f3fb0.firebasestorage.app\"}","GCLOUD_PROJECT":"communitychat-f3fb0","EVENTARC_CLOUD_EVENT_SOURCE":"projects/communitychat-f3fb0/locations/us-central1/services/adminAdjustBalance","FUNCTION_TARGET":"adminAdjustBalance","LOG_EXECUTION_ID":"true"},"maxInstanceCount":20,"ingressSettings":"ALLOW_ALL","uri":"https://adminadjustbalance-f5l3uc3mba-uc.a.run.app","serviceAccountEmail":"975021405125-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"adminadjustbalance-00001-qat","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","updateTime":"2025-08-12T11:48:46.650952693Z","labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"6de83488d91272e8c7e773ab24004464c75fb6a3"},"environment":"GEN_2","url":"https://us-central1-communitychat-f3fb0.cloudfunctions.net/adminAdjustBalance","createTime":"2025-08-12T11:47:46.428973292Z","satisfiesPzi":true},{"name":"projects/communitychat-f3fb0/locations/us-central1/functions/capturePayPalOrder","buildConfig":{"build":"projects/975021405125/locations/us-central1/builds/67be72b0-9160-4ace-a391-ea78f4d2f649","runtime":"nodejs22","entryPoint":"capturePayPalOrder","source":{"storageSource":{"bucket":"gcf-v2-sources-975021405125-us-central1","object":"capturePayPalOrder/function-source.zip","generation":"1754999326029641"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-975021405125-us-central1","object":"capturePayPalOrder/function-source.zip","generation":"1754999326029641"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/communitychat-f3fb0/serviceAccounts/975021405125-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/communitychat-f3fb0/locations/us-central1/services/capturepaypalorder","timeoutSeconds":60,"environmentVariables":{"PAYPAL_ENV":"sandbox","PAYPAL_CLIENT_ID":"AUKQcIUVN38c2D823Ab80YioFu2m6Ck5eS0kegKA_khhSJvcQOiYobc1cSxnVqOwMSEXeyr2jyJWDx8F","PAYPAL_SECRET":"EMcV0cnJ7EUt4fTpoGLsUCYCA7OC0lc3QCjQdLYPwT_amAJSwA3R0eyBjHwnfSp8y7juc93_sw60p5Vf","PAYPAL_WEBHOOK_ID":"1K354372YY825204A","FX_API_KEY":"5be414d84fb56fedd54b86e9267ee026","FX_BASE_URL":"https://api.exchangerate.host","APP_BASE_CURRENCY":"ZAR","FIREBASE_CONFIG":"{\"projectId\":\"communitychat-f3fb0\",\"storageBucket\":\"communitychat-f3fb0.firebasestorage.app\"}","GCLOUD_PROJECT":"communitychat-f3fb0","EVENTARC_CLOUD_EVENT_SOURCE":"projects/communitychat-f3fb0/locations/us-central1/services/capturePayPalOrder","FUNCTION_TARGET":"capturePayPalOrder","LOG_EXECUTION_ID":"true","FUNCTION_SIGNATURE_TYPE":"http"},"maxInstanceCount":20,"ingressSettings":"ALLOW_ALL","uri":"https://capturepaypalorder-f5l3uc3mba-uc.a.run.app","serviceAccountEmail":"975021405125-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"capturepaypalorder-00001-lov","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","updateTime":"2025-08-12T11:49:00.737613353Z","labels":{"deployment-callable":"true","firebase-functions-hash":"6de83488d91272e8c7e773ab24004464c75fb6a3","deployment-tool":"cli-firebase"},"environment":"GEN_2","url":"https://us-central1-communitychat-f3fb0.cloudfunctions.net/capturePayPalOrder","createTime":"2025-08-12T11:48:46.285785600Z","satisfiesPzi":true},{"name":"projects/communitychat-f3fb0/locations/us-central1/functions/getWalletBalance","buildConfig":{"build":"projects/975021405125/locations/us-central1/builds/67be72b0-9160-4ace-a391-ea78f4d2f649","runtime":"nodejs22","entryPoint":"getWalletBalance","source":{"storageSource":{"bucket":"gcf-v2-sources-975021405125-us-central1","object":"getWalletBalance/function-source.zip","generation":"1754999326040507"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-975021405125-us-central1","object":"getWalletBalance/function-source.zip","generation":"1754999326040507"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/communitychat-f3fb0/serviceAccounts/975021405125-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/communitychat-f3fb0/locations/us-central1/services/getwalletbalance","timeoutSeconds":60,"environmentVariables":{"PAYPAL_ENV":"sandbox","PAYPAL_CLIENT_ID":"AUKQcIUVN38c2D823Ab80YioFu2m6Ck5eS0kegKA_khhSJvcQOiYobc1cSxnVqOwMSEXeyr2jyJWDx8F","PAYPAL_SECRET":"EMcV0cnJ7EUt4fTpoGLsUCYCA7OC0lc3QCjQdLYPwT_amAJSwA3R0eyBjHwnfSp8y7juc93_sw60p5Vf","PAYPAL_WEBHOOK_ID":"1K354372YY825204A","FX_API_KEY":"5be414d84fb56fedd54b86e9267ee026","FX_BASE_URL":"https://api.exchangerate.host","APP_BASE_CURRENCY":"ZAR","FIREBASE_CONFIG":"{\"projectId\":\"communitychat-f3fb0\",\"storageBucket\":\"communitychat-f3fb0.firebasestorage.app\"}","GCLOUD_PROJECT":"communitychat-f3fb0","EVENTARC_CLOUD_EVENT_SOURCE":"projects/communitychat-f3fb0/locations/us-central1/services/getWalletBalance","FUNCTION_TARGET":"getWalletBalance","LOG_EXECUTION_ID":"true","FUNCTION_SIGNATURE_TYPE":"http"},"maxInstanceCount":20,"ingressSettings":"ALLOW_ALL","uri":"https://getwalletbalance-f5l3uc3mba-uc.a.run.app","serviceAccountEmail":"975021405125-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"getwalletbalance-00001-kav","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","updateTime":"2025-08-12T11:48:59.968728279Z","labels":{"deployment-callable":"true","firebase-functions-hash":"6de83488d91272e8c7e773ab24004464c75fb6a3","deployment-tool":"cli-firebase"},"environment":"GEN_2","url":"https://us-central1-communitychat-f3fb0.cloudfunctions.net/getWalletBalance","createTime":"2025-08-12T11:48:46.253418925Z","satisfiesPzi":true},{"name":"projects/communitychat-f3fb0/locations/us-central1/functions/api","buildConfig":{"build":"projects/975021405125/locations/us-central1/builds/67be72b0-9160-4ace-a391-ea78f4d2f649","runtime":"nodejs22","entryPoint":"api","source":{"storageSource":{"bucket":"gcf-v2-sources-975021405125-us-central1","object":"api/function-source.zip","generation":"1754999326439283"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-975021405125-us-central1","object":"api/function-source.zip","generation":"1754999326439283"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/communitychat-f3fb0/serviceAccounts/975021405125-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/communitychat-f3fb0/locations/us-central1/services/api","timeoutSeconds":60,"environmentVariables":{"PAYPAL_ENV":"sandbox","PAYPAL_CLIENT_ID":"AUKQcIUVN38c2D823Ab80YioFu2m6Ck5eS0kegKA_khhSJvcQOiYobc1cSxnVqOwMSEXeyr2jyJWDx8F","PAYPAL_SECRET":"EMcV0cnJ7EUt4fTpoGLsUCYCA7OC0lc3QCjQdLYPwT_amAJSwA3R0eyBjHwnfSp8y7juc93_sw60p5Vf","PAYPAL_WEBHOOK_ID":"1K354372YY825204A","FX_API_KEY":"5be414d84fb56fedd54b86e9267ee026","FX_BASE_URL":"https://api.exchangerate.host","APP_BASE_CURRENCY":"ZAR","FIREBASE_CONFIG":"{\"projectId\":\"communitychat-f3fb0\",\"storageBucket\":\"communitychat-f3fb0.firebasestorage.app\"}","GCLOUD_PROJECT":"communitychat-f3fb0","EVENTARC_CLOUD_EVENT_SOURCE":"projects/communitychat-f3fb0/locations/us-central1/services/api","FUNCTION_TARGET":"api","LOG_EXECUTION_ID":"true","FUNCTION_SIGNATURE_TYPE":"http"},"maxInstanceCount":20,"ingressSettings":"ALLOW_ALL","uri":"https://api-f5l3uc3mba-uc.a.run.app","serviceAccountEmail":"975021405125-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"api-00008-piq","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","updateTime":"2025-08-12T11:48:59.940393396Z","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"6de83488d91272e8c7e773ab24004464c75fb6a3"},"environment":"GEN_2","url":"https://us-central1-communitychat-f3fb0.cloudfunctions.net/api","createTime":"2025-08-07T16:38:47.167741954Z","satisfiesPzi":true},{"name":"projects/communitychat-f3fb0/locations/us-central1/functions/createPayPalOrder","buildConfig":{"build":"projects/975021405125/locations/us-central1/builds/67be72b0-9160-4ace-a391-ea78f4d2f649","runtime":"nodejs22","entryPoint":"createPayPalOrder","source":{"storageSource":{"bucket":"gcf-v2-sources-975021405125-us-central1","object":"createPayPalOrder/function-source.zip","generation":"1754999326022937"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-975021405125-us-central1","object":"createPayPalOrder/function-source.zip","generation":"1754999326022937"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/communitychat-f3fb0/serviceAccounts/975021405125-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/communitychat-f3fb0/locations/us-central1/services/createpaypalorder","timeoutSeconds":60,"environmentVariables":{"PAYPAL_ENV":"sandbox","PAYPAL_CLIENT_ID":"AUKQcIUVN38c2D823Ab80YioFu2m6Ck5eS0kegKA_khhSJvcQOiYobc1cSxnVqOwMSEXeyr2jyJWDx8F","PAYPAL_SECRET":"EMcV0cnJ7EUt4fTpoGLsUCYCA7OC0lc3QCjQdLYPwT_amAJSwA3R0eyBjHwnfSp8y7juc93_sw60p5Vf","PAYPAL_WEBHOOK_ID":"1K354372YY825204A","FX_API_KEY":"5be414d84fb56fedd54b86e9267ee026","FX_BASE_URL":"https://api.exchangerate.host","APP_BASE_CURRENCY":"ZAR","FIREBASE_CONFIG":"{\"projectId\":\"communitychat-f3fb0\",\"storageBucket\":\"communitychat-f3fb0.firebasestorage.app\"}","GCLOUD_PROJECT":"communitychat-f3fb0","EVENTARC_CLOUD_EVENT_SOURCE":"projects/communitychat-f3fb0/locations/us-central1/services/createPayPalOrder","FUNCTION_TARGET":"createPayPalOrder","LOG_EXECUTION_ID":"true","FUNCTION_SIGNATURE_TYPE":"http"},"maxInstanceCount":20,"ingressSettings":"ALLOW_ALL","uri":"https://createpaypalorder-f5l3uc3mba-uc.a.run.app","serviceAccountEmail":"975021405125-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"createpaypalorder-00001-zis","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","updateTime":"2025-08-12T11:48:59.511967757Z","labels":{"deployment-callable":"true","firebase-functions-hash":"6de83488d91272e8c7e773ab24004464c75fb6a3","deployment-tool":"cli-firebase"},"environment":"GEN_2","url":"https://us-central1-communitychat-f3fb0.cloudfunctions.net/createPayPalOrder","createTime":"2025-08-12T11:48:46.246386819Z","satisfiesPzi":true}]}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[debug] [2025-08-12T12:38:36.894Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:36.894Z] Checked if tokens are valid: true, expires at: 1755005640231
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[debug] [2025-08-12T12:38:36.894Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:36.894Z] Checked if tokens are valid: true, expires at: 1755005640231
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[debug] [2025-08-12T12:38:36.894Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:36.894Z] Checked if tokens are valid: true, expires at: 1755005640231
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2025-08-12T12:38:36.895Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:36.895Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:36.895Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/run.googleapis.com [none]
+[debug] [2025-08-12T12:38:36.895Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/run.googleapis.com x-goog-quota-user=projects/communitychat-f3fb0
+[debug] [2025-08-12T12:38:36.896Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/eventarc.googleapis.com [none]
+[debug] [2025-08-12T12:38:36.896Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/eventarc.googleapis.com x-goog-quota-user=projects/communitychat-f3fb0
+[debug] [2025-08-12T12:38:36.897Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/pubsub.googleapis.com [none]
+[debug] [2025-08-12T12:38:36.897Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/pubsub.googleapis.com x-goog-quota-user=projects/communitychat-f3fb0
+[debug] [2025-08-12T12:38:36.897Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/storage.googleapis.com [none]
+[debug] [2025-08-12T12:38:36.897Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/storage.googleapis.com x-goog-quota-user=projects/communitychat-f3fb0
+[debug] [2025-08-12T12:38:39.065Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/run.googleapis.com 200
+[debug] [2025-08-12T12:38:39.066Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/run.googleapis.com [omitted]
+[info] +  functions: required API run.googleapis.com is enabled 
+[debug] [2025-08-12T12:38:39.072Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/eventarc.googleapis.com 200
+[debug] [2025-08-12T12:38:39.072Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/eventarc.googleapis.com [omitted]
+[info] +  functions: required API eventarc.googleapis.com is enabled 
+[debug] [2025-08-12T12:38:39.105Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/storage.googleapis.com 200
+[debug] [2025-08-12T12:38:39.105Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/storage.googleapis.com [omitted]
+[info] +  functions: required API storage.googleapis.com is enabled 
+[debug] [2025-08-12T12:38:39.160Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/pubsub.googleapis.com 200
+[debug] [2025-08-12T12:38:39.160Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/communitychat-f3fb0/services/pubsub.googleapis.com [omitted]
+[info] +  functions: required API pubsub.googleapis.com is enabled 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[debug] [2025-08-12T12:38:39.161Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:39.161Z] Checked if tokens are valid: true, expires at: 1755005640231
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2025-08-12T12:38:39.161Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:39.161Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:39.161Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/975021405125/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2025-08-12T12:38:39.163Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/975021405125/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2025-08-12T12:38:41.381Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/975021405125/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2025-08-12T12:38:41.381Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/975021405125/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-975021405125@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"117025484736703530739"}}
+[debug] [2025-08-12T12:38:41.391Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/975021405125/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2025-08-12T12:38:41.391Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/975021405125/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-975021405125@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"103895669396275010184"}}
+[debug] [2025-08-12T12:38:41.392Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:41.392Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:41.392Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:41.392Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:41.392Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:41.392Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:41.392Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:41.392Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:41.392Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:41.392Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:41.392Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:41.393Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:41.393Z] >>> [apiv2][query] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/APP_BASE_CURRENCY/versions/latest [none]
+[debug] [2025-08-12T12:38:41.394Z] >>> [apiv2][query] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/PAYPAL_CLIENT_ID/versions/latest [none]
+[debug] [2025-08-12T12:38:41.395Z] >>> [apiv2][query] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/PAYPAL_SECRET/versions/latest [none]
+[debug] [2025-08-12T12:38:41.395Z] >>> [apiv2][query] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/PAYPAL_WEBHOOK_ID/versions/latest [none]
+[debug] [2025-08-12T12:38:41.396Z] >>> [apiv2][query] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/FX_API_KEY/versions/latest [none]
+[debug] [2025-08-12T12:38:41.396Z] >>> [apiv2][query] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/FX_BASE_URL/versions/latest [none]
+[debug] [2025-08-12T12:38:42.112Z] <<< [apiv2][status] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/FX_API_KEY/versions/latest 200
+[debug] [2025-08-12T12:38:42.113Z] <<< [apiv2][body] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/FX_API_KEY/versions/latest {"name":"projects/975021405125/secrets/FX_API_KEY/versions/1","createTime":"2025-08-12T12:13:28.980970Z","state":"ENABLED","replicationStatus":{"automatic":{}},"etag":"\"163c29f7ccc1ea\""}
+[debug] [2025-08-12T12:38:42.113Z] Resolved secret version of FX_API_KEY to 1.
+[debug] [2025-08-12T12:38:42.123Z] <<< [apiv2][status] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/PAYPAL_CLIENT_ID/versions/latest 200
+[debug] [2025-08-12T12:38:42.123Z] <<< [apiv2][body] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/PAYPAL_CLIENT_ID/versions/latest {"name":"projects/975021405125/secrets/PAYPAL_CLIENT_ID/versions/1","createTime":"2025-08-12T12:10:46.104498Z","state":"ENABLED","replicationStatus":{"automatic":{}},"etag":"\"163c29ee1775b2\""}
+[debug] [2025-08-12T12:38:42.123Z] Resolved secret version of PAYPAL_CLIENT_ID to 1.
+[debug] [2025-08-12T12:38:42.183Z] <<< [apiv2][status] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/PAYPAL_SECRET/versions/latest 200
+[debug] [2025-08-12T12:38:42.183Z] <<< [apiv2][body] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/PAYPAL_SECRET/versions/latest {"name":"projects/975021405125/secrets/PAYPAL_SECRET/versions/1","createTime":"2025-08-12T12:11:58.003027Z","state":"ENABLED","replicationStatus":{"automatic":{}},"etag":"\"163c29f2608b53\""}
+[debug] [2025-08-12T12:38:42.183Z] Resolved secret version of PAYPAL_SECRET to 1.
+[debug] [2025-08-12T12:38:42.383Z] <<< [apiv2][status] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/APP_BASE_CURRENCY/versions/latest 200
+[debug] [2025-08-12T12:38:42.383Z] <<< [apiv2][body] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/APP_BASE_CURRENCY/versions/latest {"name":"projects/975021405125/secrets/APP_BASE_CURRENCY/versions/1","createTime":"2025-08-12T12:14:01.532215Z","state":"ENABLED","replicationStatus":{"automatic":{}},"etag":"\"163c29f9bd7337\""}
+[debug] [2025-08-12T12:38:42.383Z] Resolved secret version of APP_BASE_CURRENCY to 1.
+[debug] [2025-08-12T12:38:42.611Z] <<< [apiv2][status] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/FX_BASE_URL/versions/latest 200
+[debug] [2025-08-12T12:38:42.612Z] <<< [apiv2][body] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/FX_BASE_URL/versions/latest {"name":"projects/975021405125/secrets/FX_BASE_URL/versions/1","createTime":"2025-08-12T12:37:33.963340Z","state":"ENABLED","replicationStatus":{"automatic":{}},"etag":"\"163c2a4ded704c\""}
+[debug] [2025-08-12T12:38:42.612Z] Resolved secret version of FX_BASE_URL to 1.
+[debug] [2025-08-12T12:38:42.884Z] <<< [apiv2][status] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/PAYPAL_WEBHOOK_ID/versions/latest 200
+[debug] [2025-08-12T12:38:42.885Z] <<< [apiv2][body] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/PAYPAL_WEBHOOK_ID/versions/latest {"name":"projects/975021405125/secrets/PAYPAL_WEBHOOK_ID/versions/1","createTime":"2025-08-12T12:12:35.868152Z","state":"ENABLED","replicationStatus":{"automatic":{}},"etag":"\"163c29f4a251f8\""}
+[debug] [2025-08-12T12:38:42.885Z] Resolved secret version of PAYPAL_WEBHOOK_ID to 1.
+[debug] [2025-08-12T12:38:42.886Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:42.886Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:42.886Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/communitychat-f3fb0 [none]
+[debug] [2025-08-12T12:38:44.742Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/communitychat-f3fb0 200
+[debug] [2025-08-12T12:38:44.742Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/communitychat-f3fb0 {"projectNumber":"975021405125","projectId":"communitychat-f3fb0","lifecycleState":"ACTIVE","name":"CommunityChat","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-02-24T19:41:46.530557Z"}
+[info] i  functions: ensuring 975021405125-compute@developer.gserviceaccount.com access to secret APP_BASE_CURRENCY. 
+[debug] [2025-08-12T12:38:44.743Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:44.744Z] Checked if tokens are valid: true, expires at: 1755005640231
+[info] i  functions: ensuring 975021405125-compute@developer.gserviceaccount.com access to secret PAYPAL_CLIENT_ID. 
+[debug] [2025-08-12T12:38:44.744Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:44.744Z] Checked if tokens are valid: true, expires at: 1755005640231
+[info] i  functions: ensuring 975021405125-compute@developer.gserviceaccount.com access to secret PAYPAL_SECRET. 
+[debug] [2025-08-12T12:38:44.745Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:44.745Z] Checked if tokens are valid: true, expires at: 1755005640231
+[info] i  functions: ensuring 975021405125-compute@developer.gserviceaccount.com access to secret PAYPAL_WEBHOOK_ID. 
+[debug] [2025-08-12T12:38:44.745Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:44.745Z] Checked if tokens are valid: true, expires at: 1755005640231
+[info] i  functions: ensuring 975021405125-compute@developer.gserviceaccount.com access to secret FX_API_KEY. 
+[debug] [2025-08-12T12:38:44.746Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:44.746Z] Checked if tokens are valid: true, expires at: 1755005640231
+[info] i  functions: ensuring 975021405125-compute@developer.gserviceaccount.com access to secret FX_BASE_URL. 
+[debug] [2025-08-12T12:38:44.746Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:44.746Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:44.746Z] >>> [apiv2][query] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/APP_BASE_CURRENCY:getIamPolicy [none]
+[debug] [2025-08-12T12:38:44.748Z] >>> [apiv2][query] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/PAYPAL_CLIENT_ID:getIamPolicy [none]
+[debug] [2025-08-12T12:38:44.749Z] >>> [apiv2][query] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/PAYPAL_SECRET:getIamPolicy [none]
+[debug] [2025-08-12T12:38:44.751Z] >>> [apiv2][query] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/PAYPAL_WEBHOOK_ID:getIamPolicy [none]
+[debug] [2025-08-12T12:38:44.752Z] >>> [apiv2][query] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/FX_API_KEY:getIamPolicy [none]
+[debug] [2025-08-12T12:38:44.753Z] >>> [apiv2][query] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/FX_BASE_URL:getIamPolicy [none]
+[debug] [2025-08-12T12:38:45.781Z] <<< [apiv2][status] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/PAYPAL_SECRET:getIamPolicy 200
+[debug] [2025-08-12T12:38:45.781Z] <<< [apiv2][body] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/PAYPAL_SECRET:getIamPolicy {"etag":"ACAB"}
+[debug] [2025-08-12T12:38:45.781Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:45.781Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:45.781Z] >>> [apiv2][query] POST https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/PAYPAL_SECRET:setIamPolicy [none]
+[debug] [2025-08-12T12:38:45.781Z] >>> [apiv2][body] POST https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/PAYPAL_SECRET:setIamPolicy {"policy":{"bindings":[{"role":"roles/secretmanager.secretAccessor","members":["serviceAccount:975021405125-compute@developer.gserviceaccount.com"]}]},"updateMask":"bindings"}
+[debug] [2025-08-12T12:38:45.883Z] <<< [apiv2][status] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/FX_API_KEY:getIamPolicy 200
+[debug] [2025-08-12T12:38:45.883Z] <<< [apiv2][body] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/FX_API_KEY:getIamPolicy {"etag":"ACAB"}
+[debug] [2025-08-12T12:38:45.884Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:45.884Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:45.884Z] >>> [apiv2][query] POST https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/FX_API_KEY:setIamPolicy [none]
+[debug] [2025-08-12T12:38:45.884Z] >>> [apiv2][body] POST https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/FX_API_KEY:setIamPolicy {"policy":{"bindings":[{"role":"roles/secretmanager.secretAccessor","members":["serviceAccount:975021405125-compute@developer.gserviceaccount.com"]}]},"updateMask":"bindings"}
+[debug] [2025-08-12T12:38:46.272Z] <<< [apiv2][status] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/PAYPAL_CLIENT_ID:getIamPolicy 200
+[debug] [2025-08-12T12:38:46.272Z] <<< [apiv2][body] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/PAYPAL_CLIENT_ID:getIamPolicy {"etag":"ACAB"}
+[debug] [2025-08-12T12:38:46.272Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:46.272Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:46.272Z] >>> [apiv2][query] POST https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/PAYPAL_CLIENT_ID:setIamPolicy [none]
+[debug] [2025-08-12T12:38:46.272Z] >>> [apiv2][body] POST https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/PAYPAL_CLIENT_ID:setIamPolicy {"policy":{"bindings":[{"role":"roles/secretmanager.secretAccessor","members":["serviceAccount:975021405125-compute@developer.gserviceaccount.com"]}]},"updateMask":"bindings"}
+[debug] [2025-08-12T12:38:46.285Z] <<< [apiv2][status] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/PAYPAL_WEBHOOK_ID:getIamPolicy 200
+[debug] [2025-08-12T12:38:46.285Z] <<< [apiv2][body] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/PAYPAL_WEBHOOK_ID:getIamPolicy {"etag":"ACAB"}
+[debug] [2025-08-12T12:38:46.285Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:46.285Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:46.285Z] >>> [apiv2][query] POST https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/PAYPAL_WEBHOOK_ID:setIamPolicy [none]
+[debug] [2025-08-12T12:38:46.285Z] >>> [apiv2][body] POST https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/PAYPAL_WEBHOOK_ID:setIamPolicy {"policy":{"bindings":[{"role":"roles/secretmanager.secretAccessor","members":["serviceAccount:975021405125-compute@developer.gserviceaccount.com"]}]},"updateMask":"bindings"}
+[debug] [2025-08-12T12:38:46.973Z] <<< [apiv2][status] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/APP_BASE_CURRENCY:getIamPolicy 200
+[debug] [2025-08-12T12:38:46.973Z] <<< [apiv2][body] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/APP_BASE_CURRENCY:getIamPolicy {"etag":"ACAB"}
+[debug] [2025-08-12T12:38:46.973Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:46.973Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:46.973Z] >>> [apiv2][query] POST https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/APP_BASE_CURRENCY:setIamPolicy [none]
+[debug] [2025-08-12T12:38:46.974Z] >>> [apiv2][body] POST https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/APP_BASE_CURRENCY:setIamPolicy {"policy":{"bindings":[{"role":"roles/secretmanager.secretAccessor","members":["serviceAccount:975021405125-compute@developer.gserviceaccount.com"]}]},"updateMask":"bindings"}
+[debug] [2025-08-12T12:38:47.020Z] <<< [apiv2][status] POST https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/PAYPAL_SECRET:setIamPolicy 200
+[debug] [2025-08-12T12:38:47.020Z] <<< [apiv2][body] POST https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/PAYPAL_SECRET:setIamPolicy {"version":1,"etag":"BwY8KlJXoqY=","bindings":[{"role":"roles/secretmanager.secretAccessor","members":["serviceAccount:975021405125-compute@developer.gserviceaccount.com"]}]}
+[info] +  secretmanager: Granted roles/secretmanager.secretAccessor on projects/communitychat-f3fb0/secrets/PAYPAL_SECRET to 975021405125-compute@developer.gserviceaccount.com 
+[info] +  functions: ensured 975021405125-compute@developer.gserviceaccount.com access to PAYPAL_SECRET. 
+[debug] [2025-08-12T12:38:47.762Z] <<< [apiv2][status] POST https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/PAYPAL_CLIENT_ID:setIamPolicy 200
+[debug] [2025-08-12T12:38:47.762Z] <<< [apiv2][body] POST https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/PAYPAL_CLIENT_ID:setIamPolicy {"version":1,"etag":"BwY8KlJetfI=","bindings":[{"role":"roles/secretmanager.secretAccessor","members":["serviceAccount:975021405125-compute@developer.gserviceaccount.com"]}]}
+[info] +  secretmanager: Granted roles/secretmanager.secretAccessor on projects/communitychat-f3fb0/secrets/PAYPAL_CLIENT_ID to 975021405125-compute@developer.gserviceaccount.com 
+[info] +  functions: ensured 975021405125-compute@developer.gserviceaccount.com access to PAYPAL_CLIENT_ID. 
+[debug] [2025-08-12T12:38:47.958Z] <<< [apiv2][status] POST https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/PAYPAL_WEBHOOK_ID:setIamPolicy 200
+[debug] [2025-08-12T12:38:47.958Z] <<< [apiv2][body] POST https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/PAYPAL_WEBHOOK_ID:setIamPolicy {"version":1,"etag":"BwY8KlJgeGY=","bindings":[{"role":"roles/secretmanager.secretAccessor","members":["serviceAccount:975021405125-compute@developer.gserviceaccount.com"]}]}
+[info] +  secretmanager: Granted roles/secretmanager.secretAccessor on projects/communitychat-f3fb0/secrets/PAYPAL_WEBHOOK_ID to 975021405125-compute@developer.gserviceaccount.com 
+[info] +  functions: ensured 975021405125-compute@developer.gserviceaccount.com access to PAYPAL_WEBHOOK_ID. 
+[debug] [2025-08-12T12:38:48.116Z] <<< [apiv2][status] POST https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/FX_API_KEY:setIamPolicy 200
+[debug] [2025-08-12T12:38:48.116Z] <<< [apiv2][body] POST https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/FX_API_KEY:setIamPolicy {"version":1,"etag":"BwY8KlJj5vM=","bindings":[{"role":"roles/secretmanager.secretAccessor","members":["serviceAccount:975021405125-compute@developer.gserviceaccount.com"]}]}
+[info] +  secretmanager: Granted roles/secretmanager.secretAccessor on projects/communitychat-f3fb0/secrets/FX_API_KEY to 975021405125-compute@developer.gserviceaccount.com 
+[info] +  functions: ensured 975021405125-compute@developer.gserviceaccount.com access to FX_API_KEY. 
+[debug] [2025-08-12T12:38:48.131Z] <<< [apiv2][status] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/FX_BASE_URL:getIamPolicy 200
+[debug] [2025-08-12T12:38:48.132Z] <<< [apiv2][body] GET https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/FX_BASE_URL:getIamPolicy {"etag":"ACAB"}
+[debug] [2025-08-12T12:38:48.132Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:48.132Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:48.133Z] >>> [apiv2][query] POST https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/FX_BASE_URL:setIamPolicy [none]
+[debug] [2025-08-12T12:38:48.133Z] >>> [apiv2][body] POST https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/FX_BASE_URL:setIamPolicy {"policy":{"bindings":[{"role":"roles/secretmanager.secretAccessor","members":["serviceAccount:975021405125-compute@developer.gserviceaccount.com"]}]},"updateMask":"bindings"}
+[debug] [2025-08-12T12:38:48.641Z] <<< [apiv2][status] POST https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/APP_BASE_CURRENCY:setIamPolicy 200
+[debug] [2025-08-12T12:38:48.641Z] <<< [apiv2][body] POST https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/APP_BASE_CURRENCY:setIamPolicy {"version":1,"etag":"BwY8KlJuYzM=","bindings":[{"role":"roles/secretmanager.secretAccessor","members":["serviceAccount:975021405125-compute@developer.gserviceaccount.com"]}]}
+[info] +  secretmanager: Granted roles/secretmanager.secretAccessor on projects/communitychat-f3fb0/secrets/APP_BASE_CURRENCY to 975021405125-compute@developer.gserviceaccount.com 
+[info] +  functions: ensured 975021405125-compute@developer.gserviceaccount.com access to APP_BASE_CURRENCY. 
+[debug] [2025-08-12T12:38:49.592Z] <<< [apiv2][status] POST https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/FX_BASE_URL:setIamPolicy 200
+[debug] [2025-08-12T12:38:49.592Z] <<< [apiv2][body] POST https://secretmanager.googleapis.com/v1/projects/communitychat-f3fb0/secrets/FX_BASE_URL:setIamPolicy {"version":1,"etag":"BwY8KlJ/JxE=","bindings":[{"role":"roles/secretmanager.secretAccessor","members":["serviceAccount:975021405125-compute@developer.gserviceaccount.com"]}]}
+[info] +  secretmanager: Granted roles/secretmanager.secretAccessor on projects/communitychat-f3fb0/secrets/FX_BASE_URL to 975021405125-compute@developer.gserviceaccount.com 
+[info] +  functions: ensured 975021405125-compute@developer.gserviceaccount.com access to FX_BASE_URL. 
+[debug] [2025-08-12T12:38:49.594Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:49.594Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:49.594Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/communitychat-f3fb0/billingInfo [none]
+[debug] [2025-08-12T12:38:50.293Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/communitychat-f3fb0/billingInfo 200
+[debug] [2025-08-12T12:38:50.293Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/communitychat-f3fb0/billingInfo {"name":"projects/communitychat-f3fb0/billingInfo","projectId":"communitychat-f3fb0","billingAccountName":"billingAccounts/01878B-D3E686-2DC957","billingEnabled":true}
+[debug] [2025-08-12T12:38:50.295Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:50.295Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:50.295Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2025-08-12T12:38:51.570Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2025-08-12T12:38:51.571Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-975021405125.us-central1.cloudfunctions.appspot.com/d2324cda-a42c-4d56-ae2c-e9a20b9db740.zip?GoogleAccessId=service-975021405125@gcf-admin-robot.iam.gserviceaccount.com&Expires=1755004132&Signature=avy9gLozzqb2K9QpPnfLWsoDe9xmLTFjrQFBHSxWQX94y9WoZyxs5DgsXrmsaO%2BfPGjQkXD1dSeoJInyJSD25OGRN%2FchDeR%2BoNUmqfewbAv%2F8M3YPSc%2FwfYbVEghG%2FvnZ4vNljO10za7Kwjre%2FH48DZd%2BZzr36qUl5CatPbPiluYwblrOp5Fcrbc%2F30knIb6gVqo1zgqdZQMQZtBcYo%2FXSXN4O78g9aB7WghNZ7qbrJxp%2B4oinNeWyVZYyeWDZQ7pVPqS21tIfrveQKvOYSzJhKgc5ozx%2FEHpAchnyc0Vzy9Waag7BlPQ3b5%2BEgDa9jLl%2BNEcZtATHmD82wKXIJPPg%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-975021405125.us-central1.cloudfunctions.appspot.com","object":"d2324cda-a42c-4d56-ae2c-e9a20b9db740.zip"}}
+[debug] [2025-08-12T12:38:51.572Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-975021405125.us-central1.cloudfunctions.appspot.com/d2324cda-a42c-4d56-ae2c-e9a20b9db740.zip GoogleAccessId=service-975021405125%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1755004132&Signature=avy9gLozzqb2K9QpPnfLWsoDe9xmLTFjrQFBHSxWQX94y9WoZyxs5DgsXrmsaO%2BfPGjQkXD1dSeoJInyJSD25OGRN%2FchDeR%2BoNUmqfewbAv%2F8M3YPSc%2FwfYbVEghG%2FvnZ4vNljO10za7Kwjre%2FH48DZd%2BZzr36qUl5CatPbPiluYwblrOp5Fcrbc%2F30knIb6gVqo1zgqdZQMQZtBcYo%2FXSXN4O78g9aB7WghNZ7qbrJxp%2B4oinNeWyVZYyeWDZQ7pVPqS21tIfrveQKvOYSzJhKgc5ozx%2FEHpAchnyc0Vzy9Waag7BlPQ3b5%2BEgDa9jLl%2BNEcZtATHmD82wKXIJPPg%3D%3D
+[debug] [2025-08-12T12:38:51.573Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-975021405125.us-central1.cloudfunctions.appspot.com/d2324cda-a42c-4d56-ae2c-e9a20b9db740.zip [stream]
+[debug] [2025-08-12T12:38:53.051Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-975021405125.us-central1.cloudfunctions.appspot.com/d2324cda-a42c-4d56-ae2c-e9a20b9db740.zip 200
+[debug] [2025-08-12T12:38:53.051Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-975021405125.us-central1.cloudfunctions.appspot.com/d2324cda-a42c-4d56-ae2c-e9a20b9db740.zip [omitted]
+[info] +  functions: functions folder uploaded successfully 
+[info] i  functions: updating Node.js 22 (2nd Gen) function adminAdjustBalance(us-central1)... 
+[info] i  functions: updating Node.js 22 (2nd Gen) function api(us-central1)... 
+[info] i  functions: updating Node.js 22 (2nd Gen) function capturePayPalOrder(us-central1)... 
+[info] i  functions: updating Node.js 22 (2nd Gen) function convertCurrency(us-central1)... 
+[info] i  functions: updating Node.js 22 (2nd Gen) function createPayPalOrder(us-central1)... 
+[info] i  functions: updating Node.js 22 (2nd Gen) function getTransactions(us-central1)... 
+[info] i  functions: updating Node.js 22 (2nd Gen) function getWalletBalance(us-central1)... 
+[info] i  functions: updating Node.js 22 (2nd Gen) function transferFunds(us-central1)... 
+[debug] [2025-08-12T12:38:53.061Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:53.061Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:53.061Z] >>> [apiv2][query] PATCH https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/adminAdjustBalance updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.secretEnvironmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels%2CbuildConfig.buildEnvironmentVariables
+[debug] [2025-08-12T12:38:53.061Z] >>> [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/adminAdjustBalance {"name":"projects/communitychat-f3fb0/locations/us-central1/functions/adminAdjustBalance","buildConfig":{"runtime":"nodejs22","entryPoint":"adminAdjustBalance","source":{"storageSource":{"bucket":"gcf-v2-uploads-975021405125.us-central1.cloudfunctions.appspot.com","object":"d2324cda-a42c-4d56-ae2c-e9a20b9db740.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"PAYPAL_ENV":"sandbox","PAYPAL_CLIENT_ID":"AUKQcIUVN38c2D823Ab80YioFu2m6Ck5eS0kegKA_khhSJvcQOiYobc1cSxnVqOwMSEXeyr2jyJWDx8F","PAYPAL_SECRET":"EMcV0cnJ7EUt4fTpoGLsUCYCA7OC0lc3QCjQdLYPwT_amAJSwA3R0eyBjHwnfSp8y7juc93_sw60p5Vf","PAYPAL_WEBHOOK_ID":"1K354372YY825204A","FX_API_KEY":"5be414d84fb56fedd54b86e9267ee026","FX_BASE_URL":"https://api.exchangerate.host","APP_BASE_CURRENCY":"ZAR","FIREBASE_CONFIG":"{\"projectId\":\"communitychat-f3fb0\",\"storageBucket\":\"communitychat-f3fb0.firebasestorage.app\"}","GCLOUD_PROJECT":"communitychat-f3fb0","EVENTARC_CLOUD_EVENT_SOURCE":"projects/communitychat-f3fb0/locations/us-central1/services/adminAdjustBalance","FUNCTION_TARGET":"adminAdjustBalance","LOG_EXECUTION_ID":"true"},"secretEnvironmentVariables":[{"key":"APP_BASE_CURRENCY","secret":"APP_BASE_CURRENCY","projectId":"communitychat-f3fb0","version":"1"}],"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null},"labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"e294ef6baa42f1a7453ab973fafdc759101c7081"}}
+[debug] [2025-08-12T12:38:54.781Z] <<< [apiv2][status] PATCH https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/adminAdjustBalance 400
+[debug] [2025-08-12T12:38:54.781Z] <<< [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/adminAdjustBalance {"error":{"code":400,"message":"Could not update Cloud Run service projects/communitychat-f3fb0/locations/us-central1/services/adminadjustbalance. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: APP_BASE_CURRENCY","status":"INVALID_ARGUMENT"}}
+[warn] !  functions: Request to https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/adminAdjustBalance?updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.secretEnvironmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels%2CbuildConfig.buildEnvironmentVariables had HTTP Error: 400, Could not update Cloud Run service projects/communitychat-f3fb0/locations/us-central1/services/adminadjustbalance. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: APP_BASE_CURRENCY 
+[warn] !  functions:  failed to update function projects/communitychat-f3fb0/locations/us-central1/functions/adminAdjustBalance 
+[error] Failed to update function projects/communitychat-f3fb0/locations/us-central1/functions/adminAdjustBalance
+[debug] [2025-08-12T12:38:54.783Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:54.783Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:54.783Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:54.783Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:54.783Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:54.784Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:54.784Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:54.784Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:54.784Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:54.784Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:54.784Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:54.784Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:54.784Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:54.784Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:38:54.784Z] >>> [apiv2][query] PATCH https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/api updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.secretEnvironmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels%2CbuildConfig.buildEnvironmentVariables
+[debug] [2025-08-12T12:38:54.784Z] >>> [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/api {"name":"projects/communitychat-f3fb0/locations/us-central1/functions/api","buildConfig":{"runtime":"nodejs22","entryPoint":"api","source":{"storageSource":{"bucket":"gcf-v2-uploads-975021405125.us-central1.cloudfunctions.appspot.com","object":"d2324cda-a42c-4d56-ae2c-e9a20b9db740.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"PAYPAL_ENV":"sandbox","PAYPAL_CLIENT_ID":"AUKQcIUVN38c2D823Ab80YioFu2m6Ck5eS0kegKA_khhSJvcQOiYobc1cSxnVqOwMSEXeyr2jyJWDx8F","PAYPAL_SECRET":"EMcV0cnJ7EUt4fTpoGLsUCYCA7OC0lc3QCjQdLYPwT_amAJSwA3R0eyBjHwnfSp8y7juc93_sw60p5Vf","PAYPAL_WEBHOOK_ID":"1K354372YY825204A","FX_API_KEY":"5be414d84fb56fedd54b86e9267ee026","FX_BASE_URL":"https://api.exchangerate.host","APP_BASE_CURRENCY":"ZAR","FIREBASE_CONFIG":"{\"projectId\":\"communitychat-f3fb0\",\"storageBucket\":\"communitychat-f3fb0.firebasestorage.app\"}","GCLOUD_PROJECT":"communitychat-f3fb0","EVENTARC_CLOUD_EVENT_SOURCE":"projects/communitychat-f3fb0/locations/us-central1/services/api","FUNCTION_TARGET":"api","LOG_EXECUTION_ID":"true"},"secretEnvironmentVariables":[{"key":"PAYPAL_CLIENT_ID","secret":"PAYPAL_CLIENT_ID","projectId":"communitychat-f3fb0","version":"1"},{"key":"PAYPAL_SECRET","secret":"PAYPAL_SECRET","projectId":"communitychat-f3fb0","version":"1"},{"key":"PAYPAL_WEBHOOK_ID","secret":"PAYPAL_WEBHOOK_ID","projectId":"communitychat-f3fb0","version":"1"},{"key":"FX_API_KEY","secret":"FX_API_KEY","projectId":"communitychat-f3fb0","version":"1"},{"key":"APP_BASE_CURRENCY","secret":"APP_BASE_CURRENCY","projectId":"communitychat-f3fb0","version":"1"}],"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"b241716bfd66bdd04df32d185271063b5cd85bc0"}}
+[debug] [2025-08-12T12:38:54.785Z] >>> [apiv2][query] PATCH https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/capturePayPalOrder updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.secretEnvironmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels%2CbuildConfig.buildEnvironmentVariables
+[debug] [2025-08-12T12:38:54.785Z] >>> [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/capturePayPalOrder {"name":"projects/communitychat-f3fb0/locations/us-central1/functions/capturePayPalOrder","buildConfig":{"runtime":"nodejs22","entryPoint":"capturePayPalOrder","source":{"storageSource":{"bucket":"gcf-v2-uploads-975021405125.us-central1.cloudfunctions.appspot.com","object":"d2324cda-a42c-4d56-ae2c-e9a20b9db740.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"PAYPAL_ENV":"sandbox","PAYPAL_CLIENT_ID":"AUKQcIUVN38c2D823Ab80YioFu2m6Ck5eS0kegKA_khhSJvcQOiYobc1cSxnVqOwMSEXeyr2jyJWDx8F","PAYPAL_SECRET":"EMcV0cnJ7EUt4fTpoGLsUCYCA7OC0lc3QCjQdLYPwT_amAJSwA3R0eyBjHwnfSp8y7juc93_sw60p5Vf","PAYPAL_WEBHOOK_ID":"1K354372YY825204A","FX_API_KEY":"5be414d84fb56fedd54b86e9267ee026","FX_BASE_URL":"https://api.exchangerate.host","APP_BASE_CURRENCY":"ZAR","FIREBASE_CONFIG":"{\"projectId\":\"communitychat-f3fb0\",\"storageBucket\":\"communitychat-f3fb0.firebasestorage.app\"}","GCLOUD_PROJECT":"communitychat-f3fb0","EVENTARC_CLOUD_EVENT_SOURCE":"projects/communitychat-f3fb0/locations/us-central1/services/capturePayPalOrder","FUNCTION_TARGET":"capturePayPalOrder","LOG_EXECUTION_ID":"true"},"secretEnvironmentVariables":[{"key":"PAYPAL_CLIENT_ID","secret":"PAYPAL_CLIENT_ID","projectId":"communitychat-f3fb0","version":"1"},{"key":"PAYPAL_SECRET","secret":"PAYPAL_SECRET","projectId":"communitychat-f3fb0","version":"1"},{"key":"APP_BASE_CURRENCY","secret":"APP_BASE_CURRENCY","projectId":"communitychat-f3fb0","version":"1"}],"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null},"labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"2a5fba63bd296fac24255c41fa707163ee5b79ce"}}
+[debug] [2025-08-12T12:38:54.787Z] >>> [apiv2][query] PATCH https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/convertCurrency updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.secretEnvironmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels%2CbuildConfig.buildEnvironmentVariables
+[debug] [2025-08-12T12:38:54.787Z] >>> [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/convertCurrency {"name":"projects/communitychat-f3fb0/locations/us-central1/functions/convertCurrency","buildConfig":{"runtime":"nodejs22","entryPoint":"convertCurrency","source":{"storageSource":{"bucket":"gcf-v2-uploads-975021405125.us-central1.cloudfunctions.appspot.com","object":"d2324cda-a42c-4d56-ae2c-e9a20b9db740.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"PAYPAL_ENV":"sandbox","PAYPAL_CLIENT_ID":"AUKQcIUVN38c2D823Ab80YioFu2m6Ck5eS0kegKA_khhSJvcQOiYobc1cSxnVqOwMSEXeyr2jyJWDx8F","PAYPAL_SECRET":"EMcV0cnJ7EUt4fTpoGLsUCYCA7OC0lc3QCjQdLYPwT_amAJSwA3R0eyBjHwnfSp8y7juc93_sw60p5Vf","PAYPAL_WEBHOOK_ID":"1K354372YY825204A","FX_API_KEY":"5be414d84fb56fedd54b86e9267ee026","FX_BASE_URL":"https://api.exchangerate.host","APP_BASE_CURRENCY":"ZAR","FIREBASE_CONFIG":"{\"projectId\":\"communitychat-f3fb0\",\"storageBucket\":\"communitychat-f3fb0.firebasestorage.app\"}","GCLOUD_PROJECT":"communitychat-f3fb0","EVENTARC_CLOUD_EVENT_SOURCE":"projects/communitychat-f3fb0/locations/us-central1/services/convertCurrency","FUNCTION_TARGET":"convertCurrency","LOG_EXECUTION_ID":"true"},"secretEnvironmentVariables":[{"key":"FX_API_KEY","secret":"FX_API_KEY","projectId":"communitychat-f3fb0","version":"1"},{"key":"APP_BASE_CURRENCY","secret":"APP_BASE_CURRENCY","projectId":"communitychat-f3fb0","version":"1"},{"key":"FX_BASE_URL","secret":"FX_BASE_URL","projectId":"communitychat-f3fb0","version":"1"}],"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null},"labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"1fe560955959b992a2d08b3842268ecc69fcbab2"}}
+[debug] [2025-08-12T12:38:54.788Z] >>> [apiv2][query] PATCH https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/createPayPalOrder updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.secretEnvironmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels%2CbuildConfig.buildEnvironmentVariables
+[debug] [2025-08-12T12:38:54.788Z] >>> [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/createPayPalOrder {"name":"projects/communitychat-f3fb0/locations/us-central1/functions/createPayPalOrder","buildConfig":{"runtime":"nodejs22","entryPoint":"createPayPalOrder","source":{"storageSource":{"bucket":"gcf-v2-uploads-975021405125.us-central1.cloudfunctions.appspot.com","object":"d2324cda-a42c-4d56-ae2c-e9a20b9db740.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"PAYPAL_ENV":"sandbox","PAYPAL_CLIENT_ID":"AUKQcIUVN38c2D823Ab80YioFu2m6Ck5eS0kegKA_khhSJvcQOiYobc1cSxnVqOwMSEXeyr2jyJWDx8F","PAYPAL_SECRET":"EMcV0cnJ7EUt4fTpoGLsUCYCA7OC0lc3QCjQdLYPwT_amAJSwA3R0eyBjHwnfSp8y7juc93_sw60p5Vf","PAYPAL_WEBHOOK_ID":"1K354372YY825204A","FX_API_KEY":"5be414d84fb56fedd54b86e9267ee026","FX_BASE_URL":"https://api.exchangerate.host","APP_BASE_CURRENCY":"ZAR","FIREBASE_CONFIG":"{\"projectId\":\"communitychat-f3fb0\",\"storageBucket\":\"communitychat-f3fb0.firebasestorage.app\"}","GCLOUD_PROJECT":"communitychat-f3fb0","EVENTARC_CLOUD_EVENT_SOURCE":"projects/communitychat-f3fb0/locations/us-central1/services/createPayPalOrder","FUNCTION_TARGET":"createPayPalOrder","LOG_EXECUTION_ID":"true"},"secretEnvironmentVariables":[{"key":"PAYPAL_CLIENT_ID","secret":"PAYPAL_CLIENT_ID","projectId":"communitychat-f3fb0","version":"1"},{"key":"PAYPAL_SECRET","secret":"PAYPAL_SECRET","projectId":"communitychat-f3fb0","version":"1"},{"key":"APP_BASE_CURRENCY","secret":"APP_BASE_CURRENCY","projectId":"communitychat-f3fb0","version":"1"}],"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null},"labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"2a5fba63bd296fac24255c41fa707163ee5b79ce"}}
+[debug] [2025-08-12T12:38:54.789Z] >>> [apiv2][query] PATCH https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/getTransactions updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.secretEnvironmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels%2CbuildConfig.buildEnvironmentVariables
+[debug] [2025-08-12T12:38:54.789Z] >>> [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/getTransactions {"name":"projects/communitychat-f3fb0/locations/us-central1/functions/getTransactions","buildConfig":{"runtime":"nodejs22","entryPoint":"getTransactions","source":{"storageSource":{"bucket":"gcf-v2-uploads-975021405125.us-central1.cloudfunctions.appspot.com","object":"d2324cda-a42c-4d56-ae2c-e9a20b9db740.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"PAYPAL_ENV":"sandbox","PAYPAL_CLIENT_ID":"AUKQcIUVN38c2D823Ab80YioFu2m6Ck5eS0kegKA_khhSJvcQOiYobc1cSxnVqOwMSEXeyr2jyJWDx8F","PAYPAL_SECRET":"EMcV0cnJ7EUt4fTpoGLsUCYCA7OC0lc3QCjQdLYPwT_amAJSwA3R0eyBjHwnfSp8y7juc93_sw60p5Vf","PAYPAL_WEBHOOK_ID":"1K354372YY825204A","FX_API_KEY":"5be414d84fb56fedd54b86e9267ee026","FX_BASE_URL":"https://api.exchangerate.host","APP_BASE_CURRENCY":"ZAR","FIREBASE_CONFIG":"{\"projectId\":\"communitychat-f3fb0\",\"storageBucket\":\"communitychat-f3fb0.firebasestorage.app\"}","GCLOUD_PROJECT":"communitychat-f3fb0","EVENTARC_CLOUD_EVENT_SOURCE":"projects/communitychat-f3fb0/locations/us-central1/services/getTransactions","FUNCTION_TARGET":"getTransactions","LOG_EXECUTION_ID":"true"},"secretEnvironmentVariables":[{"key":"APP_BASE_CURRENCY","secret":"APP_BASE_CURRENCY","projectId":"communitychat-f3fb0","version":"1"}],"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null},"labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"e294ef6baa42f1a7453ab973fafdc759101c7081"}}
+[debug] [2025-08-12T12:38:54.790Z] >>> [apiv2][query] PATCH https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/getWalletBalance updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.secretEnvironmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels%2CbuildConfig.buildEnvironmentVariables
+[debug] [2025-08-12T12:38:54.790Z] >>> [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/getWalletBalance {"name":"projects/communitychat-f3fb0/locations/us-central1/functions/getWalletBalance","buildConfig":{"runtime":"nodejs22","entryPoint":"getWalletBalance","source":{"storageSource":{"bucket":"gcf-v2-uploads-975021405125.us-central1.cloudfunctions.appspot.com","object":"d2324cda-a42c-4d56-ae2c-e9a20b9db740.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"PAYPAL_ENV":"sandbox","PAYPAL_CLIENT_ID":"AUKQcIUVN38c2D823Ab80YioFu2m6Ck5eS0kegKA_khhSJvcQOiYobc1cSxnVqOwMSEXeyr2jyJWDx8F","PAYPAL_SECRET":"EMcV0cnJ7EUt4fTpoGLsUCYCA7OC0lc3QCjQdLYPwT_amAJSwA3R0eyBjHwnfSp8y7juc93_sw60p5Vf","PAYPAL_WEBHOOK_ID":"1K354372YY825204A","FX_API_KEY":"5be414d84fb56fedd54b86e9267ee026","FX_BASE_URL":"https://api.exchangerate.host","APP_BASE_CURRENCY":"ZAR","FIREBASE_CONFIG":"{\"projectId\":\"communitychat-f3fb0\",\"storageBucket\":\"communitychat-f3fb0.firebasestorage.app\"}","GCLOUD_PROJECT":"communitychat-f3fb0","EVENTARC_CLOUD_EVENT_SOURCE":"projects/communitychat-f3fb0/locations/us-central1/services/getWalletBalance","FUNCTION_TARGET":"getWalletBalance","LOG_EXECUTION_ID":"true"},"secretEnvironmentVariables":[{"key":"APP_BASE_CURRENCY","secret":"APP_BASE_CURRENCY","projectId":"communitychat-f3fb0","version":"1"}],"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null},"labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"e294ef6baa42f1a7453ab973fafdc759101c7081"}}
+[debug] [2025-08-12T12:38:54.791Z] >>> [apiv2][query] PATCH https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/transferFunds updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.secretEnvironmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels%2CbuildConfig.buildEnvironmentVariables
+[debug] [2025-08-12T12:38:54.791Z] >>> [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/transferFunds {"name":"projects/communitychat-f3fb0/locations/us-central1/functions/transferFunds","buildConfig":{"runtime":"nodejs22","entryPoint":"transferFunds","source":{"storageSource":{"bucket":"gcf-v2-uploads-975021405125.us-central1.cloudfunctions.appspot.com","object":"d2324cda-a42c-4d56-ae2c-e9a20b9db740.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"PAYPAL_ENV":"sandbox","PAYPAL_CLIENT_ID":"AUKQcIUVN38c2D823Ab80YioFu2m6Ck5eS0kegKA_khhSJvcQOiYobc1cSxnVqOwMSEXeyr2jyJWDx8F","PAYPAL_SECRET":"EMcV0cnJ7EUt4fTpoGLsUCYCA7OC0lc3QCjQdLYPwT_amAJSwA3R0eyBjHwnfSp8y7juc93_sw60p5Vf","PAYPAL_WEBHOOK_ID":"1K354372YY825204A","FX_API_KEY":"5be414d84fb56fedd54b86e9267ee026","FX_BASE_URL":"https://api.exchangerate.host","APP_BASE_CURRENCY":"ZAR","FIREBASE_CONFIG":"{\"projectId\":\"communitychat-f3fb0\",\"storageBucket\":\"communitychat-f3fb0.firebasestorage.app\"}","GCLOUD_PROJECT":"communitychat-f3fb0","EVENTARC_CLOUD_EVENT_SOURCE":"projects/communitychat-f3fb0/locations/us-central1/services/transferFunds","FUNCTION_TARGET":"transferFunds","LOG_EXECUTION_ID":"true"},"secretEnvironmentVariables":[{"key":"APP_BASE_CURRENCY","secret":"APP_BASE_CURRENCY","projectId":"communitychat-f3fb0","version":"1"}],"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null},"labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"e294ef6baa42f1a7453ab973fafdc759101c7081"}}
+[debug] [2025-08-12T12:38:58.154Z] <<< [apiv2][status] PATCH https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/capturePayPalOrder 400
+[debug] [2025-08-12T12:38:58.154Z] <<< [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/capturePayPalOrder {"error":{"code":400,"message":"Could not update Cloud Run service projects/communitychat-f3fb0/locations/us-central1/services/capturepaypalorder. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: PAYPAL_CLIENT_ID","status":"INVALID_ARGUMENT"}}
+[warn] !  functions: Request to https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/capturePayPalOrder?updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.secretEnvironmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels%2CbuildConfig.buildEnvironmentVariables had HTTP Error: 400, Could not update Cloud Run service projects/communitychat-f3fb0/locations/us-central1/services/capturepaypalorder. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: PAYPAL_CLIENT_ID 
+[warn] !  functions:  failed to update function projects/communitychat-f3fb0/locations/us-central1/functions/capturePayPalOrder 
+[error] Failed to update function projects/communitychat-f3fb0/locations/us-central1/functions/capturePayPalOrder
+[debug] [2025-08-12T12:38:58.211Z] <<< [apiv2][status] PATCH https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/api 400
+[debug] [2025-08-12T12:38:58.212Z] <<< [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/api {"error":{"code":400,"message":"Could not update Cloud Run service projects/communitychat-f3fb0/locations/us-central1/services/api. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: PAYPAL_CLIENT_ID","status":"INVALID_ARGUMENT"}}
+[warn] !  functions: Request to https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/api?updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.secretEnvironmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels%2CbuildConfig.buildEnvironmentVariables had HTTP Error: 400, Could not update Cloud Run service projects/communitychat-f3fb0/locations/us-central1/services/api. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: PAYPAL_CLIENT_ID 
+[warn] !  functions:  failed to update function projects/communitychat-f3fb0/locations/us-central1/functions/api 
+[error] Failed to update function projects/communitychat-f3fb0/locations/us-central1/functions/api
+[debug] [2025-08-12T12:38:58.239Z] <<< [apiv2][status] PATCH https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/convertCurrency 400
+[debug] [2025-08-12T12:38:58.240Z] <<< [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/convertCurrency {"error":{"code":400,"message":"Could not update Cloud Run service projects/communitychat-f3fb0/locations/us-central1/services/convertcurrency. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: FX_API_KEY","status":"INVALID_ARGUMENT"}}
+[warn] !  functions: Request to https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/convertCurrency?updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.secretEnvironmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels%2CbuildConfig.buildEnvironmentVariables had HTTP Error: 400, Could not update Cloud Run service projects/communitychat-f3fb0/locations/us-central1/services/convertcurrency. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: FX_API_KEY 
+[warn] !  functions:  failed to update function projects/communitychat-f3fb0/locations/us-central1/functions/convertCurrency 
+[error] Failed to update function projects/communitychat-f3fb0/locations/us-central1/functions/convertCurrency
+[debug] [2025-08-12T12:38:58.270Z] <<< [apiv2][status] PATCH https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/getWalletBalance 400
+[debug] [2025-08-12T12:38:58.270Z] <<< [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/getWalletBalance {"error":{"code":400,"message":"Could not update Cloud Run service projects/communitychat-f3fb0/locations/us-central1/services/getwalletbalance. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: APP_BASE_CURRENCY","status":"INVALID_ARGUMENT"}}
+[warn] !  functions: Request to https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/getWalletBalance?updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.secretEnvironmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels%2CbuildConfig.buildEnvironmentVariables had HTTP Error: 400, Could not update Cloud Run service projects/communitychat-f3fb0/locations/us-central1/services/getwalletbalance. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: APP_BASE_CURRENCY 
+[warn] !  functions:  failed to update function projects/communitychat-f3fb0/locations/us-central1/functions/getWalletBalance 
+[error] Failed to update function projects/communitychat-f3fb0/locations/us-central1/functions/getWalletBalance
+[debug] [2025-08-12T12:38:58.291Z] <<< [apiv2][status] PATCH https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/transferFunds 400
+[debug] [2025-08-12T12:38:58.292Z] <<< [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/transferFunds {"error":{"code":400,"message":"Could not update Cloud Run service projects/communitychat-f3fb0/locations/us-central1/services/transferfunds. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: APP_BASE_CURRENCY","status":"INVALID_ARGUMENT"}}
+[warn] !  functions: Request to https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/transferFunds?updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.secretEnvironmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels%2CbuildConfig.buildEnvironmentVariables had HTTP Error: 400, Could not update Cloud Run service projects/communitychat-f3fb0/locations/us-central1/services/transferfunds. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: APP_BASE_CURRENCY 
+[warn] !  functions:  failed to update function projects/communitychat-f3fb0/locations/us-central1/functions/transferFunds 
+[error] Failed to update function projects/communitychat-f3fb0/locations/us-central1/functions/transferFunds
+[debug] [2025-08-12T12:38:58.386Z] <<< [apiv2][status] PATCH https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/createPayPalOrder 400
+[debug] [2025-08-12T12:38:58.387Z] <<< [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/createPayPalOrder {"error":{"code":400,"message":"Could not update Cloud Run service projects/communitychat-f3fb0/locations/us-central1/services/createpaypalorder. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: PAYPAL_CLIENT_ID","status":"INVALID_ARGUMENT"}}
+[warn] !  functions: Request to https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/createPayPalOrder?updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.secretEnvironmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels%2CbuildConfig.buildEnvironmentVariables had HTTP Error: 400, Could not update Cloud Run service projects/communitychat-f3fb0/locations/us-central1/services/createpaypalorder. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: PAYPAL_CLIENT_ID 
+[warn] !  functions:  failed to update function projects/communitychat-f3fb0/locations/us-central1/functions/createPayPalOrder 
+[error] Failed to update function projects/communitychat-f3fb0/locations/us-central1/functions/createPayPalOrder
+[debug] [2025-08-12T12:38:58.391Z] <<< [apiv2][status] PATCH https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/getTransactions 400
+[debug] [2025-08-12T12:38:58.391Z] <<< [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/getTransactions {"error":{"code":400,"message":"Could not update Cloud Run service projects/communitychat-f3fb0/locations/us-central1/services/gettransactions. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: APP_BASE_CURRENCY","status":"INVALID_ARGUMENT"}}
+[warn] !  functions: Request to https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/getTransactions?updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.secretEnvironmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels%2CbuildConfig.buildEnvironmentVariables had HTTP Error: 400, Could not update Cloud Run service projects/communitychat-f3fb0/locations/us-central1/services/gettransactions. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: APP_BASE_CURRENCY 
+[warn] !  functions:  failed to update function projects/communitychat-f3fb0/locations/us-central1/functions/getTransactions 
+[error] Failed to update function projects/communitychat-f3fb0/locations/us-central1/functions/getTransactions
+[debug] [2025-08-12T12:38:58.406Z] Total Function Deployment time: 5337
+[debug] [2025-08-12T12:38:58.406Z] 8 Functions Deployed
+[debug] [2025-08-12T12:38:58.406Z] 8 Functions Errored
+[debug] [2025-08-12T12:38:58.406Z] 0 Function Deployments Aborted
+[debug] [2025-08-12T12:38:58.406Z] Average Function Deployment time: 4783
+[info] 
+[info] Functions deploy had errors with the following functions:
+	adminAdjustBalance(us-central1)
+	api(us-central1)
+	capturePayPalOrder(us-central1)
+	convertCurrency(us-central1)
+	createPayPalOrder(us-central1)
+	getTransactions(us-central1)
+	getWalletBalance(us-central1)
+	transferFunds(us-central1)
+[debug] [2025-08-12T12:39:00.143Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[info] i  functions: cleaning up build files... 
+[debug] [2025-08-12T12:39:00.144Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:39:00.145Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:39:00.145Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:39:00.145Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:39:00.145Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:39:00.145Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:39:00.145Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:39:00.145Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:39:00.145Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:39:00.145Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:39:00.145Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:39:00.145Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:39:00.145Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:39:00.145Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:39:00.145Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:39:00.145Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:39:00.146Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:39:00.146Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:39:00.146Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1/projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts/packages/communitychat--f3fb0__us--central1__admin_adjust_balance [none]
+[debug] [2025-08-12T12:39:00.146Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1/projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts/packages/communitychat--f3fb0__us--central1__api [none]
+[debug] [2025-08-12T12:39:00.147Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1/projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts/packages/communitychat--f3fb0__us--central1__capture_pay_pal_order [none]
+[debug] [2025-08-12T12:39:00.148Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1/projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts/packages/communitychat--f3fb0__us--central1__convert_currency [none]
+[debug] [2025-08-12T12:39:00.148Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1/projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts/packages/communitychat--f3fb0__us--central1__create_pay_pal_order [none]
+[debug] [2025-08-12T12:39:00.148Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1/projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts/packages/communitychat--f3fb0__us--central1__get_transactions [none]
+[debug] [2025-08-12T12:39:00.149Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1/projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts/packages/communitychat--f3fb0__us--central1__get_wallet_balance [none]
+[debug] [2025-08-12T12:39:00.150Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1/projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts/packages/communitychat--f3fb0__us--central1__transfer_funds [none]
+[debug] [2025-08-12T12:39:00.150Z] >>> [apiv2][query] GET https://us.gcr.io/v2/communitychat-f3fb0/gcf/us-central1/tags/list [none]
+[debug] [2025-08-12T12:39:02.950Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1/projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts/packages/communitychat--f3fb0__us--central1__capture_pay_pal_order 404
+[debug] [2025-08-12T12:39:02.950Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1/projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts/packages/communitychat--f3fb0__us--central1__capture_pay_pal_order {"error":{"code":404,"message":"Package \"projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts/packages/communitychat--f3fb0__us--central1__capture_pay_pal_order\" was not found.","status":"NOT_FOUND"}}
+[debug] [2025-08-12T12:39:02.951Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1/projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts/packages/communitychat--f3fb0__us--central1__get_transactions 404
+[debug] [2025-08-12T12:39:02.951Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1/projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts/packages/communitychat--f3fb0__us--central1__get_transactions {"error":{"code":404,"message":"Package \"projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts/packages/communitychat--f3fb0__us--central1__get_transactions\" was not found.","status":"NOT_FOUND"}}
+[debug] [2025-08-12T12:39:02.951Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1/projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts/packages/communitychat--f3fb0__us--central1__transfer_funds 404
+[debug] [2025-08-12T12:39:02.951Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1/projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts/packages/communitychat--f3fb0__us--central1__transfer_funds {"error":{"code":404,"message":"Package \"projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts/packages/communitychat--f3fb0__us--central1__transfer_funds\" was not found.","status":"NOT_FOUND"}}
+[debug] [2025-08-12T12:39:02.951Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1/projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts/packages/communitychat--f3fb0__us--central1__api 404
+[debug] [2025-08-12T12:39:02.951Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1/projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts/packages/communitychat--f3fb0__us--central1__api {"error":{"code":404,"message":"Package \"projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts/packages/communitychat--f3fb0__us--central1__api\" was not found.","status":"NOT_FOUND"}}
+[debug] [2025-08-12T12:39:02.952Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1/projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts/packages/communitychat--f3fb0__us--central1__admin_adjust_balance 404
+[debug] [2025-08-12T12:39:02.952Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1/projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts/packages/communitychat--f3fb0__us--central1__admin_adjust_balance {"error":{"code":404,"message":"Package \"projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts/packages/communitychat--f3fb0__us--central1__admin_adjust_balance\" was not found.","status":"NOT_FOUND"}}
+[debug] [2025-08-12T12:39:02.952Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1/projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts/packages/communitychat--f3fb0__us--central1__create_pay_pal_order 404
+[debug] [2025-08-12T12:39:02.952Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1/projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts/packages/communitychat--f3fb0__us--central1__create_pay_pal_order {"error":{"code":404,"message":"Package \"projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts/packages/communitychat--f3fb0__us--central1__create_pay_pal_order\" was not found.","status":"NOT_FOUND"}}
+[debug] [2025-08-12T12:39:02.953Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1/projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts/packages/communitychat--f3fb0__us--central1__convert_currency 404
+[debug] [2025-08-12T12:39:02.953Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1/projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts/packages/communitychat--f3fb0__us--central1__convert_currency {"error":{"code":404,"message":"Package \"projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts/packages/communitychat--f3fb0__us--central1__convert_currency\" was not found.","status":"NOT_FOUND"}}
+[debug] [2025-08-12T12:39:02.953Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1/projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts/packages/communitychat--f3fb0__us--central1__get_wallet_balance 404
+[debug] [2025-08-12T12:39:02.953Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1/projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts/packages/communitychat--f3fb0__us--central1__get_wallet_balance {"error":{"code":404,"message":"Package \"projects/communitychat-f3fb0/locations/us-central1/repositories/gcf-artifacts/packages/communitychat--f3fb0__us--central1__get_wallet_balance\" was not found.","status":"NOT_FOUND"}}
+[debug] [2025-08-12T12:39:03.331Z] <<< [apiv2][status] GET https://us.gcr.io/v2/communitychat-f3fb0/gcf/us-central1/tags/list 404
+[debug] [2025-08-12T12:39:03.331Z] <<< [apiv2][body] GET https://us.gcr.io/v2/communitychat-f3fb0/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2025-08-12T12:39:03.331Z] Failed docker command with error  Request to https://us.gcr.io/v2/communitychat-f3fb0/gcf/us-central1/tags/list had HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://us.gcr.io/v2/communitychat-f3fb0/gcf/us-central1/tags/list had HTTP Error: 404, Not Found","status":404}
+[debug] [2025-08-12T12:39:03.344Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:39:03.344Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:39:03.344Z] >>> [apiv2][query] GET https://us.gcr.io/v2/communitychat-f3fb0/gcf/us-central1/tags/list [none]
+[debug] [2025-08-12T12:39:05.030Z] <<< [apiv2][status] GET https://us.gcr.io/v2/communitychat-f3fb0/gcf/us-central1/tags/list 404
+[debug] [2025-08-12T12:39:05.030Z] <<< [apiv2][body] GET https://us.gcr.io/v2/communitychat-f3fb0/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2025-08-12T12:39:05.030Z] Failed docker command with error  Request to https://us.gcr.io/v2/communitychat-f3fb0/gcf/us-central1/tags/list had HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://us.gcr.io/v2/communitychat-f3fb0/gcf/us-central1/tags/list had HTTP Error: 404, Not Found","status":404}
+[debug] [2025-08-12T12:39:05.145Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:39:05.146Z] Checked if tokens are valid: true, expires at: 1755005640231
+[debug] [2025-08-12T12:39:05.146Z] >>> [apiv2][query] GET https://us.gcr.io/v2/communitychat-f3fb0/gcf/us-central1/tags/list [none]
+[debug] [2025-08-12T12:39:05.990Z] <<< [apiv2][status] GET https://us.gcr.io/v2/communitychat-f3fb0/gcf/us-central1/tags/list 404
+[debug] [2025-08-12T12:39:05.990Z] <<< [apiv2][body] GET https://us.gcr.io/v2/communitychat-f3fb0/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2025-08-12T12:39:05.990Z] Failed docker command with error  Request to https://us.gcr.io/v2/communitychat-f3fb0/gcf/us-central1/tags/list had HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://us.gcr.io/v2/communitychat-f3fb0/gcf/us-central1/tags/list had HTTP Error: 404, Not Found","status":404}
+[warn] !  functions: Unhandled error cleaning up build images. This could result in a small monthly bill if not corrected. You can attempt to delete these images by redeploying or you can delete them manually at https://console.cloud.google.com/gcr/images/communitychat-f3fb0/us/gcf 
+[debug] [2025-08-12T12:39:05.991Z] Functions deploy failed.
+[debug] [2025-08-12T12:39:05.991Z] {
+  "endpoint": {
+    "id": "adminAdjustBalance",
+    "project": "communitychat-f3fb0",
+    "region": "us-central1",
+    "entryPoint": "adminAdjustBalance",
+    "platform": "gcfv2",
+    "runtime": "nodejs22",
+    "callableTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "secretEnvironmentVariables": [
+      {
+        "key": "APP_BASE_CURRENCY",
+        "secret": "APP_BASE_CURRENCY",
+        "projectId": "communitychat-f3fb0",
+        "version": "1"
+      }
+    ],
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "serviceAccount": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "concurrency": 80,
+    "vpc": null,
+    "environmentVariables": {
+      "PAYPAL_ENV": "sandbox",
+      "PAYPAL_CLIENT_ID": "AUKQcIUVN38c2D823Ab80YioFu2m6Ck5eS0kegKA_khhSJvcQOiYobc1cSxnVqOwMSEXeyr2jyJWDx8F",
+      "PAYPAL_SECRET": "EMcV0cnJ7EUt4fTpoGLsUCYCA7OC0lc3QCjQdLYPwT_amAJSwA3R0eyBjHwnfSp8y7juc93_sw60p5Vf",
+      "PAYPAL_WEBHOOK_ID": "1K354372YY825204A",
+      "FX_API_KEY": "5be414d84fb56fedd54b86e9267ee026",
+      "FX_BASE_URL": "https://api.exchangerate.host",
+      "APP_BASE_CURRENCY": "ZAR",
+      "FIREBASE_CONFIG": "{\"projectId\":\"communitychat-f3fb0\",\"storageBucket\":\"communitychat-f3fb0.firebasestorage.app\"}",
+      "GCLOUD_PROJECT": "communitychat-f3fb0",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/communitychat-f3fb0/locations/us-central1/services/adminAdjustBalance"
+    },
+    "codebase": "default",
+    "runServiceId": "adminadjustbalance",
+    "cpu": 1,
+    "securityLevel": "SECURE_ALWAYS",
+    "targetedByOnly": false,
+    "hash": "e294ef6baa42f1a7453ab973fafdc759101c7081"
+  },
+  "op": "update",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "context": {
+      "function": "projects/communitychat-f3fb0/locations/us-central1/functions/adminAdjustBalance"
+    },
+    "exit": 1,
+    "message": "Failed to update function projects/communitychat-f3fb0/locations/us-central1/functions/adminAdjustBalance",
+    "original": {
+      "name": "FirebaseError",
+      "children": [],
+      "context": {
+        "body": {
+          "error": {
+            "code": 400,
+            "message": "Could not update Cloud Run service projects/communitychat-f3fb0/locations/us-central1/services/adminadjustbalance. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: APP_BASE_CURRENCY",
+            "status": "INVALID_ARGUMENT"
+          }
+        },
+        "response": {
+          "statusCode": 400
+        }
+      },
+      "exit": 1,
+      "message": "Request to https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/adminAdjustBalance?updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.secretEnvironmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels%2CbuildConfig.buildEnvironmentVariables had HTTP Error: 400, Could not update Cloud Run service projects/communitychat-f3fb0/locations/us-central1/services/adminadjustbalance. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: APP_BASE_CURRENCY",
+      "status": 400
+    },
+    "status": 400,
+    "code": 400
+  }
+}
+[debug] [2025-08-12T12:39:05.991Z] {
+  "endpoint": {
+    "id": "capturePayPalOrder",
+    "project": "communitychat-f3fb0",
+    "region": "us-central1",
+    "entryPoint": "capturePayPalOrder",
+    "platform": "gcfv2",
+    "runtime": "nodejs22",
+    "callableTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "secretEnvironmentVariables": [
+      {
+        "key": "PAYPAL_CLIENT_ID",
+        "secret": "PAYPAL_CLIENT_ID",
+        "projectId": "communitychat-f3fb0",
+        "version": "1"
+      },
+      {
+        "key": "PAYPAL_SECRET",
+        "secret": "PAYPAL_SECRET",
+        "projectId": "communitychat-f3fb0",
+        "version": "1"
+      },
+      {
+        "key": "APP_BASE_CURRENCY",
+        "secret": "APP_BASE_CURRENCY",
+        "projectId": "communitychat-f3fb0",
+        "version": "1"
+      }
+    ],
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "serviceAccount": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "concurrency": 80,
+    "vpc": null,
+    "environmentVariables": {
+      "PAYPAL_ENV": "sandbox",
+      "PAYPAL_CLIENT_ID": "AUKQcIUVN38c2D823Ab80YioFu2m6Ck5eS0kegKA_khhSJvcQOiYobc1cSxnVqOwMSEXeyr2jyJWDx8F",
+      "PAYPAL_SECRET": "EMcV0cnJ7EUt4fTpoGLsUCYCA7OC0lc3QCjQdLYPwT_amAJSwA3R0eyBjHwnfSp8y7juc93_sw60p5Vf",
+      "PAYPAL_WEBHOOK_ID": "1K354372YY825204A",
+      "FX_API_KEY": "5be414d84fb56fedd54b86e9267ee026",
+      "FX_BASE_URL": "https://api.exchangerate.host",
+      "APP_BASE_CURRENCY": "ZAR",
+      "FIREBASE_CONFIG": "{\"projectId\":\"communitychat-f3fb0\",\"storageBucket\":\"communitychat-f3fb0.firebasestorage.app\"}",
+      "GCLOUD_PROJECT": "communitychat-f3fb0",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/communitychat-f3fb0/locations/us-central1/services/capturePayPalOrder"
+    },
+    "codebase": "default",
+    "runServiceId": "capturepaypalorder",
+    "cpu": 1,
+    "securityLevel": "SECURE_ALWAYS",
+    "targetedByOnly": false,
+    "hash": "2a5fba63bd296fac24255c41fa707163ee5b79ce"
+  },
+  "op": "update",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "context": {
+      "function": "projects/communitychat-f3fb0/locations/us-central1/functions/capturePayPalOrder"
+    },
+    "exit": 1,
+    "message": "Failed to update function projects/communitychat-f3fb0/locations/us-central1/functions/capturePayPalOrder",
+    "original": {
+      "name": "FirebaseError",
+      "children": [],
+      "context": {
+        "body": {
+          "error": {
+            "code": 400,
+            "message": "Could not update Cloud Run service projects/communitychat-f3fb0/locations/us-central1/services/capturepaypalorder. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: PAYPAL_CLIENT_ID",
+            "status": "INVALID_ARGUMENT"
+          }
+        },
+        "response": {
+          "statusCode": 400
+        }
+      },
+      "exit": 1,
+      "message": "Request to https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/capturePayPalOrder?updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.secretEnvironmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels%2CbuildConfig.buildEnvironmentVariables had HTTP Error: 400, Could not update Cloud Run service projects/communitychat-f3fb0/locations/us-central1/services/capturepaypalorder. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: PAYPAL_CLIENT_ID",
+      "status": 400
+    },
+    "status": 400,
+    "code": 400
+  }
+}
+[debug] [2025-08-12T12:39:05.991Z] {
+  "endpoint": {
+    "id": "api",
+    "project": "communitychat-f3fb0",
+    "region": "us-central1",
+    "entryPoint": "api",
+    "platform": "gcfv2",
+    "runtime": "nodejs22",
+    "httpsTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "secretEnvironmentVariables": [
+      {
+        "key": "PAYPAL_CLIENT_ID",
+        "secret": "PAYPAL_CLIENT_ID",
+        "projectId": "communitychat-f3fb0",
+        "version": "1"
+      },
+      {
+        "key": "PAYPAL_SECRET",
+        "secret": "PAYPAL_SECRET",
+        "projectId": "communitychat-f3fb0",
+        "version": "1"
+      },
+      {
+        "key": "PAYPAL_WEBHOOK_ID",
+        "secret": "PAYPAL_WEBHOOK_ID",
+        "projectId": "communitychat-f3fb0",
+        "version": "1"
+      },
+      {
+        "key": "FX_API_KEY",
+        "secret": "FX_API_KEY",
+        "projectId": "communitychat-f3fb0",
+        "version": "1"
+      },
+      {
+        "key": "APP_BASE_CURRENCY",
+        "secret": "APP_BASE_CURRENCY",
+        "projectId": "communitychat-f3fb0",
+        "version": "1"
+      }
+    ],
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "serviceAccount": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "concurrency": 80,
+    "vpc": null,
+    "environmentVariables": {
+      "PAYPAL_ENV": "sandbox",
+      "PAYPAL_CLIENT_ID": "AUKQcIUVN38c2D823Ab80YioFu2m6Ck5eS0kegKA_khhSJvcQOiYobc1cSxnVqOwMSEXeyr2jyJWDx8F",
+      "PAYPAL_SECRET": "EMcV0cnJ7EUt4fTpoGLsUCYCA7OC0lc3QCjQdLYPwT_amAJSwA3R0eyBjHwnfSp8y7juc93_sw60p5Vf",
+      "PAYPAL_WEBHOOK_ID": "1K354372YY825204A",
+      "FX_API_KEY": "5be414d84fb56fedd54b86e9267ee026",
+      "FX_BASE_URL": "https://api.exchangerate.host",
+      "APP_BASE_CURRENCY": "ZAR",
+      "FIREBASE_CONFIG": "{\"projectId\":\"communitychat-f3fb0\",\"storageBucket\":\"communitychat-f3fb0.firebasestorage.app\"}",
+      "GCLOUD_PROJECT": "communitychat-f3fb0",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/communitychat-f3fb0/locations/us-central1/services/api"
+    },
+    "codebase": "default",
+    "runServiceId": "api",
+    "cpu": 1,
+    "securityLevel": "SECURE_ALWAYS",
+    "targetedByOnly": false,
+    "hash": "b241716bfd66bdd04df32d185271063b5cd85bc0"
+  },
+  "op": "update",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "context": {
+      "function": "projects/communitychat-f3fb0/locations/us-central1/functions/api"
+    },
+    "exit": 1,
+    "message": "Failed to update function projects/communitychat-f3fb0/locations/us-central1/functions/api",
+    "original": {
+      "name": "FirebaseError",
+      "children": [],
+      "context": {
+        "body": {
+          "error": {
+            "code": 400,
+            "message": "Could not update Cloud Run service projects/communitychat-f3fb0/locations/us-central1/services/api. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: PAYPAL_CLIENT_ID",
+            "status": "INVALID_ARGUMENT"
+          }
+        },
+        "response": {
+          "statusCode": 400
+        }
+      },
+      "exit": 1,
+      "message": "Request to https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/api?updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.secretEnvironmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels%2CbuildConfig.buildEnvironmentVariables had HTTP Error: 400, Could not update Cloud Run service projects/communitychat-f3fb0/locations/us-central1/services/api. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: PAYPAL_CLIENT_ID",
+      "status": 400
+    },
+    "status": 400,
+    "code": 400
+  }
+}
+[debug] [2025-08-12T12:39:05.991Z] {
+  "endpoint": {
+    "id": "convertCurrency",
+    "project": "communitychat-f3fb0",
+    "region": "us-central1",
+    "entryPoint": "convertCurrency",
+    "platform": "gcfv2",
+    "runtime": "nodejs22",
+    "callableTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "secretEnvironmentVariables": [
+      {
+        "key": "FX_API_KEY",
+        "secret": "FX_API_KEY",
+        "projectId": "communitychat-f3fb0",
+        "version": "1"
+      },
+      {
+        "key": "APP_BASE_CURRENCY",
+        "secret": "APP_BASE_CURRENCY",
+        "projectId": "communitychat-f3fb0",
+        "version": "1"
+      },
+      {
+        "key": "FX_BASE_URL",
+        "secret": "FX_BASE_URL",
+        "projectId": "communitychat-f3fb0",
+        "version": "1"
+      }
+    ],
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "serviceAccount": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "concurrency": 80,
+    "vpc": null,
+    "environmentVariables": {
+      "PAYPAL_ENV": "sandbox",
+      "PAYPAL_CLIENT_ID": "AUKQcIUVN38c2D823Ab80YioFu2m6Ck5eS0kegKA_khhSJvcQOiYobc1cSxnVqOwMSEXeyr2jyJWDx8F",
+      "PAYPAL_SECRET": "EMcV0cnJ7EUt4fTpoGLsUCYCA7OC0lc3QCjQdLYPwT_amAJSwA3R0eyBjHwnfSp8y7juc93_sw60p5Vf",
+      "PAYPAL_WEBHOOK_ID": "1K354372YY825204A",
+      "FX_API_KEY": "5be414d84fb56fedd54b86e9267ee026",
+      "FX_BASE_URL": "https://api.exchangerate.host",
+      "APP_BASE_CURRENCY": "ZAR",
+      "FIREBASE_CONFIG": "{\"projectId\":\"communitychat-f3fb0\",\"storageBucket\":\"communitychat-f3fb0.firebasestorage.app\"}",
+      "GCLOUD_PROJECT": "communitychat-f3fb0",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/communitychat-f3fb0/locations/us-central1/services/convertCurrency"
+    },
+    "codebase": "default",
+    "runServiceId": "convertcurrency",
+    "cpu": 1,
+    "securityLevel": "SECURE_ALWAYS",
+    "targetedByOnly": false,
+    "hash": "1fe560955959b992a2d08b3842268ecc69fcbab2"
+  },
+  "op": "update",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "context": {
+      "function": "projects/communitychat-f3fb0/locations/us-central1/functions/convertCurrency"
+    },
+    "exit": 1,
+    "message": "Failed to update function projects/communitychat-f3fb0/locations/us-central1/functions/convertCurrency",
+    "original": {
+      "name": "FirebaseError",
+      "children": [],
+      "context": {
+        "body": {
+          "error": {
+            "code": 400,
+            "message": "Could not update Cloud Run service projects/communitychat-f3fb0/locations/us-central1/services/convertcurrency. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: FX_API_KEY",
+            "status": "INVALID_ARGUMENT"
+          }
+        },
+        "response": {
+          "statusCode": 400
+        }
+      },
+      "exit": 1,
+      "message": "Request to https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/convertCurrency?updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.secretEnvironmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels%2CbuildConfig.buildEnvironmentVariables had HTTP Error: 400, Could not update Cloud Run service projects/communitychat-f3fb0/locations/us-central1/services/convertcurrency. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: FX_API_KEY",
+      "status": 400
+    },
+    "status": 400,
+    "code": 400
+  }
+}
+[debug] [2025-08-12T12:39:05.991Z] {
+  "endpoint": {
+    "id": "getWalletBalance",
+    "project": "communitychat-f3fb0",
+    "region": "us-central1",
+    "entryPoint": "getWalletBalance",
+    "platform": "gcfv2",
+    "runtime": "nodejs22",
+    "callableTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "secretEnvironmentVariables": [
+      {
+        "key": "APP_BASE_CURRENCY",
+        "secret": "APP_BASE_CURRENCY",
+        "projectId": "communitychat-f3fb0",
+        "version": "1"
+      }
+    ],
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "serviceAccount": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "concurrency": 80,
+    "vpc": null,
+    "environmentVariables": {
+      "PAYPAL_ENV": "sandbox",
+      "PAYPAL_CLIENT_ID": "AUKQcIUVN38c2D823Ab80YioFu2m6Ck5eS0kegKA_khhSJvcQOiYobc1cSxnVqOwMSEXeyr2jyJWDx8F",
+      "PAYPAL_SECRET": "EMcV0cnJ7EUt4fTpoGLsUCYCA7OC0lc3QCjQdLYPwT_amAJSwA3R0eyBjHwnfSp8y7juc93_sw60p5Vf",
+      "PAYPAL_WEBHOOK_ID": "1K354372YY825204A",
+      "FX_API_KEY": "5be414d84fb56fedd54b86e9267ee026",
+      "FX_BASE_URL": "https://api.exchangerate.host",
+      "APP_BASE_CURRENCY": "ZAR",
+      "FIREBASE_CONFIG": "{\"projectId\":\"communitychat-f3fb0\",\"storageBucket\":\"communitychat-f3fb0.firebasestorage.app\"}",
+      "GCLOUD_PROJECT": "communitychat-f3fb0",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/communitychat-f3fb0/locations/us-central1/services/getWalletBalance"
+    },
+    "codebase": "default",
+    "runServiceId": "getwalletbalance",
+    "cpu": 1,
+    "securityLevel": "SECURE_ALWAYS",
+    "targetedByOnly": false,
+    "hash": "e294ef6baa42f1a7453ab973fafdc759101c7081"
+  },
+  "op": "update",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "context": {
+      "function": "projects/communitychat-f3fb0/locations/us-central1/functions/getWalletBalance"
+    },
+    "exit": 1,
+    "message": "Failed to update function projects/communitychat-f3fb0/locations/us-central1/functions/getWalletBalance",
+    "original": {
+      "name": "FirebaseError",
+      "children": [],
+      "context": {
+        "body": {
+          "error": {
+            "code": 400,
+            "message": "Could not update Cloud Run service projects/communitychat-f3fb0/locations/us-central1/services/getwalletbalance. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: APP_BASE_CURRENCY",
+            "status": "INVALID_ARGUMENT"
+          }
+        },
+        "response": {
+          "statusCode": 400
+        }
+      },
+      "exit": 1,
+      "message": "Request to https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/getWalletBalance?updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.secretEnvironmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels%2CbuildConfig.buildEnvironmentVariables had HTTP Error: 400, Could not update Cloud Run service projects/communitychat-f3fb0/locations/us-central1/services/getwalletbalance. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: APP_BASE_CURRENCY",
+      "status": 400
+    },
+    "status": 400,
+    "code": 400
+  }
+}
+[debug] [2025-08-12T12:39:05.991Z] {
+  "endpoint": {
+    "id": "transferFunds",
+    "project": "communitychat-f3fb0",
+    "region": "us-central1",
+    "entryPoint": "transferFunds",
+    "platform": "gcfv2",
+    "runtime": "nodejs22",
+    "callableTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "secretEnvironmentVariables": [
+      {
+        "key": "APP_BASE_CURRENCY",
+        "secret": "APP_BASE_CURRENCY",
+        "projectId": "communitychat-f3fb0",
+        "version": "1"
+      }
+    ],
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "serviceAccount": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "concurrency": 80,
+    "vpc": null,
+    "environmentVariables": {
+      "PAYPAL_ENV": "sandbox",
+      "PAYPAL_CLIENT_ID": "AUKQcIUVN38c2D823Ab80YioFu2m6Ck5eS0kegKA_khhSJvcQOiYobc1cSxnVqOwMSEXeyr2jyJWDx8F",
+      "PAYPAL_SECRET": "EMcV0cnJ7EUt4fTpoGLsUCYCA7OC0lc3QCjQdLYPwT_amAJSwA3R0eyBjHwnfSp8y7juc93_sw60p5Vf",
+      "PAYPAL_WEBHOOK_ID": "1K354372YY825204A",
+      "FX_API_KEY": "5be414d84fb56fedd54b86e9267ee026",
+      "FX_BASE_URL": "https://api.exchangerate.host",
+      "APP_BASE_CURRENCY": "ZAR",
+      "FIREBASE_CONFIG": "{\"projectId\":\"communitychat-f3fb0\",\"storageBucket\":\"communitychat-f3fb0.firebasestorage.app\"}",
+      "GCLOUD_PROJECT": "communitychat-f3fb0",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/communitychat-f3fb0/locations/us-central1/services/transferFunds"
+    },
+    "codebase": "default",
+    "runServiceId": "transferfunds",
+    "cpu": 1,
+    "securityLevel": "SECURE_ALWAYS",
+    "targetedByOnly": false,
+    "hash": "e294ef6baa42f1a7453ab973fafdc759101c7081"
+  },
+  "op": "update",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "context": {
+      "function": "projects/communitychat-f3fb0/locations/us-central1/functions/transferFunds"
+    },
+    "exit": 1,
+    "message": "Failed to update function projects/communitychat-f3fb0/locations/us-central1/functions/transferFunds",
+    "original": {
+      "name": "FirebaseError",
+      "children": [],
+      "context": {
+        "body": {
+          "error": {
+            "code": 400,
+            "message": "Could not update Cloud Run service projects/communitychat-f3fb0/locations/us-central1/services/transferfunds. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: APP_BASE_CURRENCY",
+            "status": "INVALID_ARGUMENT"
+          }
+        },
+        "response": {
+          "statusCode": 400
+        }
+      },
+      "exit": 1,
+      "message": "Request to https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/transferFunds?updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.secretEnvironmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels%2CbuildConfig.buildEnvironmentVariables had HTTP Error: 400, Could not update Cloud Run service projects/communitychat-f3fb0/locations/us-central1/services/transferfunds. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: APP_BASE_CURRENCY",
+      "status": 400
+    },
+    "status": 400,
+    "code": 400
+  }
+}
+[debug] [2025-08-12T12:39:05.991Z] {
+  "endpoint": {
+    "id": "createPayPalOrder",
+    "project": "communitychat-f3fb0",
+    "region": "us-central1",
+    "entryPoint": "createPayPalOrder",
+    "platform": "gcfv2",
+    "runtime": "nodejs22",
+    "callableTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "secretEnvironmentVariables": [
+      {
+        "key": "PAYPAL_CLIENT_ID",
+        "secret": "PAYPAL_CLIENT_ID",
+        "projectId": "communitychat-f3fb0",
+        "version": "1"
+      },
+      {
+        "key": "PAYPAL_SECRET",
+        "secret": "PAYPAL_SECRET",
+        "projectId": "communitychat-f3fb0",
+        "version": "1"
+      },
+      {
+        "key": "APP_BASE_CURRENCY",
+        "secret": "APP_BASE_CURRENCY",
+        "projectId": "communitychat-f3fb0",
+        "version": "1"
+      }
+    ],
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "serviceAccount": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "concurrency": 80,
+    "vpc": null,
+    "environmentVariables": {
+      "PAYPAL_ENV": "sandbox",
+      "PAYPAL_CLIENT_ID": "AUKQcIUVN38c2D823Ab80YioFu2m6Ck5eS0kegKA_khhSJvcQOiYobc1cSxnVqOwMSEXeyr2jyJWDx8F",
+      "PAYPAL_SECRET": "EMcV0cnJ7EUt4fTpoGLsUCYCA7OC0lc3QCjQdLYPwT_amAJSwA3R0eyBjHwnfSp8y7juc93_sw60p5Vf",
+      "PAYPAL_WEBHOOK_ID": "1K354372YY825204A",
+      "FX_API_KEY": "5be414d84fb56fedd54b86e9267ee026",
+      "FX_BASE_URL": "https://api.exchangerate.host",
+      "APP_BASE_CURRENCY": "ZAR",
+      "FIREBASE_CONFIG": "{\"projectId\":\"communitychat-f3fb0\",\"storageBucket\":\"communitychat-f3fb0.firebasestorage.app\"}",
+      "GCLOUD_PROJECT": "communitychat-f3fb0",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/communitychat-f3fb0/locations/us-central1/services/createPayPalOrder"
+    },
+    "codebase": "default",
+    "runServiceId": "createpaypalorder",
+    "cpu": 1,
+    "securityLevel": "SECURE_ALWAYS",
+    "targetedByOnly": false,
+    "hash": "2a5fba63bd296fac24255c41fa707163ee5b79ce"
+  },
+  "op": "update",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "context": {
+      "function": "projects/communitychat-f3fb0/locations/us-central1/functions/createPayPalOrder"
+    },
+    "exit": 1,
+    "message": "Failed to update function projects/communitychat-f3fb0/locations/us-central1/functions/createPayPalOrder",
+    "original": {
+      "name": "FirebaseError",
+      "children": [],
+      "context": {
+        "body": {
+          "error": {
+            "code": 400,
+            "message": "Could not update Cloud Run service projects/communitychat-f3fb0/locations/us-central1/services/createpaypalorder. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: PAYPAL_CLIENT_ID",
+            "status": "INVALID_ARGUMENT"
+          }
+        },
+        "response": {
+          "statusCode": 400
+        }
+      },
+      "exit": 1,
+      "message": "Request to https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/createPayPalOrder?updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.secretEnvironmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels%2CbuildConfig.buildEnvironmentVariables had HTTP Error: 400, Could not update Cloud Run service projects/communitychat-f3fb0/locations/us-central1/services/createpaypalorder. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: PAYPAL_CLIENT_ID",
+      "status": 400
+    },
+    "status": 400,
+    "code": 400
+  }
+}
+[debug] [2025-08-12T12:39:05.992Z] {
+  "endpoint": {
+    "id": "getTransactions",
+    "project": "communitychat-f3fb0",
+    "region": "us-central1",
+    "entryPoint": "getTransactions",
+    "platform": "gcfv2",
+    "runtime": "nodejs22",
+    "callableTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "secretEnvironmentVariables": [
+      {
+        "key": "APP_BASE_CURRENCY",
+        "secret": "APP_BASE_CURRENCY",
+        "projectId": "communitychat-f3fb0",
+        "version": "1"
+      }
+    ],
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "serviceAccount": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "concurrency": 80,
+    "vpc": null,
+    "environmentVariables": {
+      "PAYPAL_ENV": "sandbox",
+      "PAYPAL_CLIENT_ID": "AUKQcIUVN38c2D823Ab80YioFu2m6Ck5eS0kegKA_khhSJvcQOiYobc1cSxnVqOwMSEXeyr2jyJWDx8F",
+      "PAYPAL_SECRET": "EMcV0cnJ7EUt4fTpoGLsUCYCA7OC0lc3QCjQdLYPwT_amAJSwA3R0eyBjHwnfSp8y7juc93_sw60p5Vf",
+      "PAYPAL_WEBHOOK_ID": "1K354372YY825204A",
+      "FX_API_KEY": "5be414d84fb56fedd54b86e9267ee026",
+      "FX_BASE_URL": "https://api.exchangerate.host",
+      "APP_BASE_CURRENCY": "ZAR",
+      "FIREBASE_CONFIG": "{\"projectId\":\"communitychat-f3fb0\",\"storageBucket\":\"communitychat-f3fb0.firebasestorage.app\"}",
+      "GCLOUD_PROJECT": "communitychat-f3fb0",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/communitychat-f3fb0/locations/us-central1/services/getTransactions"
+    },
+    "codebase": "default",
+    "runServiceId": "gettransactions",
+    "cpu": 1,
+    "securityLevel": "SECURE_ALWAYS",
+    "targetedByOnly": false,
+    "hash": "e294ef6baa42f1a7453ab973fafdc759101c7081"
+  },
+  "op": "update",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "context": {
+      "function": "projects/communitychat-f3fb0/locations/us-central1/functions/getTransactions"
+    },
+    "exit": 1,
+    "message": "Failed to update function projects/communitychat-f3fb0/locations/us-central1/functions/getTransactions",
+    "original": {
+      "name": "FirebaseError",
+      "children": [],
+      "context": {
+        "body": {
+          "error": {
+            "code": 400,
+            "message": "Could not update Cloud Run service projects/communitychat-f3fb0/locations/us-central1/services/gettransactions. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: APP_BASE_CURRENCY",
+            "status": "INVALID_ARGUMENT"
+          }
+        },
+        "response": {
+          "statusCode": 400
+        }
+      },
+      "exit": 1,
+      "message": "Request to https://cloudfunctions.googleapis.com/v2/projects/communitychat-f3fb0/locations/us-central1/functions/getTransactions?updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.secretEnvironmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels%2CbuildConfig.buildEnvironmentVariables had HTTP Error: 400, Could not update Cloud Run service projects/communitychat-f3fb0/locations/us-central1/services/gettransactions. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: APP_BASE_CURRENCY",
+      "status": 400
+    },
+    "status": 400,
+    "code": 400
+  }
+}
+[error] Error: There was an error deploying functions:
+[error] - Error Failed to update function adminAdjustBalance in region us-central1
+[error] - Error Failed to update function capturePayPalOrder in region us-central1
+[error] - Error Failed to update function api in region us-central1
+[error] - Error Failed to update function convertCurrency in region us-central1
+[error] - Error Failed to update function getWalletBalance in region us-central1
+[error] - Error Failed to update function transferFunds in region us-central1
+[error] - Error Failed to update function createPayPalOrder in region us-central1
+[error] - Error Failed to update function getTransactions in region us-central1
